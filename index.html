@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alton Bekolli | Portfolio</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Scripts -->
+   <!-- GSAP (Animationsbibliothek) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="profilbild.png" alt="Alton Bekolli" class="profile-pic" />
+      <h1>Alton Bekolli</h1>
+
+      <ul class="sidebar-nav">
+        <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> Über mich</a></li>
+        <li><a href="#cv"><i class="fas fa-file-alt"></i> Lebenslauf</a></li>
+        <li><a href="#projects"><i class="fas fa-images"></i> Projekte</a></li>
+        <li><a href="#hobbies"><i class="fas fa-star"></i> Hobbys</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Kontakt</a></li>
+      </ul>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/Altonbekolli" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+
+      <div class="contact-info">
+        <p><strong>📍 Ulm</strong></p>
+        <p>📧 Altonbekolli_1@web.de</p>
+        <p>📱 +49 176 45994247</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <h1>Hi, mein Name ist Alton und ich <span id="typed"></span></h1>
+      </section>
+
+      <!-- Über mich -->
+      <section id="about" class="section about-section">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Über mich</h2>
+            <p>
+              Ich bin Alton Bekolli, Informatikstudent an der Technischen Hochschule Ulm mit Schwerpunkt auf Mobile Application Development und Computer Engineering.
+              Durch mein Wahlfach „Game Programming mit Java“ konnte ich meine Kenntnisse im Bereich Softwareentwicklung noch weiter vertiefen.
+            </p>
+            <p>
+              Bereits während meiner Schulzeit habe ich erste Erfahrungen mit C# gesammelt und schnell meine Begeisterung für das Programmieren entdeckt. Seit April 2024 arbeite ich als Werkstudent bei der BITE GmbH und werde dort ab Mai mein Praxissemester absolvieren.
+            </p>
+            <p>
+              Ich habe bereits verschiedene Projekte realisiert, von mobilen Anwendungen bis zu modernen Webanwendungen, Spiele und verschiedene kleine Systeme und liebe es, Neues zu lernen, egal ob im Team oder alleine. Programmieren ist nicht nur mein Beruf, sondern meine Leidenschaft.
+            </p>
+          </div>
+      
+          <div class="about-skills">
+            <h2>Meine Skills</h2>
+      
+            <div class="skill">
+              <span>HTML / CSS / JavaScript / TypeScript</span>
+              <div class="skill-bar">
+                <div class="skill-fill-container">
+                <div class="skill-fill" data-width="90%"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill">
+              <span>Java</span>
+              <div class="skill-bar">
+                <div class="skill-fill-container">
+                <div class="skill-fill" data-width="80%"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill">
+              <span>C#</span>
+              <div class="skill-bar">
+                <div class="skill-fill-container">
+                <div class="skill-fill" data-width="70%"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill">
+              <span>C / C++</span>
+              <div class="skill-bar">
+                <div class="skill-fill-container">
+                <div class="skill-fill" data-width="50%"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="skill">
+              <span>Go</span>
+              <div class="skill-bar">
+                <div class="skill-fill-container">
+                <div class="skill-fill" data-width="45%"></div>
+                </div>
+              </div>
+            </div>   
+            </div>   
+        </div>      
+      </section>
+      
+
+      <!-- Lebenslauf -->
+      <section id="cv" class="section">
+        <h2>Lebenslauf</h2>
+        <p>Hier kommt dein Lebenslauf rein.</p>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Projekte</h2>
+        <div class="headline-effect" id="headline-effect">KLICK MICH AN!</div>
+        <div class="project-grid">
+          <!-- STREET LEGEND ONLY -->
+          <a class="project-card" href="https://github.com/lxvro7/StreetLegends" target="_blank">
+            <div class="media-wrapper">
+              <img src="game.png" alt="Street Legend Game">
+            </div>
+            <div class="project-info">
+              <h3>Street Legend</h3>
+              <p>Ein 2D-Rennspiel mit Java/JavaFX.</p>
+            </div>
+          </a>
+      
+          <!-- Weitere Projekte -->
+          <a class="project-card" href="https://github.com/Altonbekolli/booking-App" target="_blank">
+            <div class="media-wrapper">
+              <img src="booking.png" alt="Go Conference Booking">
+            </div>
+            <div class="project-info">
+              <h3>Go Conference Booking</h3>
+              <p>Ein Buchungssystem mit HTML, CSS, JS & Go.</p>
+            </div>
+          </a>
+      
+          <a class="project-card" href="http://firebot.vom-kuhberg.de" target="_blank">
+            <div class="media-wrapper">
+              <video src="firebot.mp4" muted autoplay loop playsinline></video>
+            </div>
+            <div class="project-info">
+              <h3>Firebot</h3>
+              <p>Ein Roboter, der Feuer mit Wasser bekämpft.</p>
+            </div>
+          </a>
+      
+          <a class="project-card" href="https://github.com/Altonbekolli/forYourLove?tab=readme-ov-file" target="_blank">
+            <div class="media-wrapper">
+              <img src="love.png" alt="For Your Love">
+            </div>
+            <div class="project-info">
+              <h3>For Your Love</h3>
+              <p>Berechne deine Beziehungsdauer mit Stil.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      
+      <!-- Hobbys -->
+      <section id="hobbies" class="section">
+        <h2>Hobbys</h2>
+        <p>Deine Hobbys und Interessen kannst du hier beschreiben.</p>
+      </section>
+
+      <!-- Kontakt -->
+      <div class="contact-wrapper">
+        <form id="kontakt-formular" class="glass-box" method="POST" action="send-mail.php">
+          <h2>Kontaktformular</h2>
+      
+          <label for="anrede">Anrede:</label>
+          <select name="anrede" required>
+            <option>Herr</option>
+            <option>Frau</option>
+            <option>Divers</option>
+            <option>Anonym</option>
+          </select>
+      
+          <div id="name-container">
+            <label for="name">Name (optional):</label>
+            <input type="text" name="name" placeholder="Max Mustermann">
+          </div>
+          
+          <label for="betreff">Ich schreibe wegen:</label>
+          <select name="betreff" id="betreff-auswahl" required>
+            <option value="Feedback">Feedback</option>
+            <option value="Zusammenarbeit">Zusammenarbeit</option>
+          </select>
+      
+          <div id="projekt-typ-container" style="display: none;">
+            <label for="projektTyp">Projekt-Typ:</label>
+            <select name="projektTyp">
+              <option value="Webseite">Webseite</option>
+              <option value="Portfolio">Portfolio</option>
+              <option value="Andere">Andere Projekte</option>
+            </select>
+          </div>
+      
+          <label for="nachricht">Nachricht:</label>
+          <textarea name="nachricht" required></textarea>
+      
+          <button type="submit">Absenden</button>
+        </form>
+      
+        <div id="danke-message" class="hidden-message">
+           <span id="feedback-response">Vielen Dank für deine Nachricht!</span>
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="socials">
+          <a href="https://www.instagram.com/?next=%2F" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com" target="_blank">Facebook</a>
+          <a href="https://github.com/Altonbekolli" target="_blank">GitHub</a>
+        </div>
+        <p>📞 +49 176 45994247<br />✉️ Altonbekolli_1@web.de</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
