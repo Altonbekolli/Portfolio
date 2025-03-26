@@ -124,3 +124,29 @@ anredeSelect.addEventListener("change", () => {
   });
 });
 
+const images = document.querySelectorAll(".slider-img");
+let current = 0;
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+function updateSlider(index) {
+  images.forEach((img, i) => {
+    img.classList.toggle("active", i === index);
+  });
+}
+
+function nextSlide() {
+  current = (current + 1) % images.length;
+  updateSlider(current);
+}
+
+function prevSlide() {
+  current = (current - 1 + images.length) % images.length;
+  updateSlider(current);
+}
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+setInterval(nextSlide, 10000);
+
+
