@@ -14,25 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // GSAP Plugin registrieren
   gsap.registerPlugin(ScrollTrigger);
 
-  // Lebenslauf-Block Animation 
-  gsap.utils.toArray(".cv-block").forEach((block) => {
-    gsap.fromTo(
-      block,
-      { opacity: 0, y: 50, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: block,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
-  });
+  
 
   gsap.utils.toArray('.skill-fill').forEach(el => {
     const container = el.closest('.skill-fill-container');
@@ -45,9 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.timeline({
       scrollTrigger: {
         trigger: container,
-        start: 'top 90%',
+        start: 'top 95%',
+        end: 'bottom 5%',
         toggleActions: 'play reset play reset',
-      }
+      },
     })
     .to(el, {
       width: targetWidth,
@@ -150,3 +133,45 @@ prevBtn.addEventListener("click", prevSlide);
 setInterval(nextSlide, 10000);
 
 
+const loveSlides = document.querySelectorAll(".love-slide");
+const loveNext = document.querySelector(".love-next");
+const lovePrev = document.querySelector(".love-prev");
+let loveIndex = 0;
+
+function updateLoveSlider(index) {
+  loveSlides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+}
+
+loveNext.addEventListener("click", () => {
+  loveIndex = (loveIndex + 1) % loveSlides.length;
+  updateLoveSlider(loveIndex);
+});
+
+lovePrev.addEventListener("click", () => {
+  loveIndex = (loveIndex - 1 + loveSlides.length) % loveSlides.length;
+  updateLoveSlider(loveIndex);
+});
+
+// Optional: automatischer Wechsel
+setInterval(() => {
+  loveIndex = (loveIndex + 1) % loveSlides.length;
+  updateLoveSlider(loveIndex);
+}, 12000);
+
+
+const filterSelect = document.getElementById("skill-filter");
+const skillItems = document.querySelectorAll(".skill");
+
+filterSelect.addEventListener("change", () => {
+  const selected = filterSelect.value;
+  skillItems.forEach(skill => {
+    const category = skill.getAttribute("data-category");
+    if (selected === "alle" || selected === category) {
+      skill.style.display = "block";
+    } else {
+      skill.style.display = "none";
+    }
+  });
+});
