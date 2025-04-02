@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Alton Bekolli | Portfolio</title>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Scripts -->
-   <!-- GSAP (Animationsbibliothek) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script defer src="js/script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Alton Bekolli | Portfolio</title>
+  
+    <!-- Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"></noscript>
+  
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+    <!-- Custom Script -->
+    <script defer src="js/script.js"></script>
 </head>
 <body>
-  <div class="layout">
+  <a href="#main" class="visually-hidden focusable">Zum Hauptinhalt springen</a>
+  <button id="scrollToTop" title="Nach oben">
+    <i class="fas fa-arrow-up"></i>
+  </button> 
+   <div class="layout">
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar fade-in-up" role="complementary">
+      <div class="bubbles" aria-hidden="true">
+        <span style="--i:3"></span>
+        <span style="--i:7"></span>
+        <span style="--i:13"></span>
+        <span style="--i:20"></span>
+        <span style="--i:11"></span>
+      </div>
       <img src="assets/profilbild.png" alt="Alton Bekolli" class="profile-pic" />
       <h1>Alton Bekolli</h1>
-
-      <ul class="sidebar-nav">
-        <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#about"><i class="fas fa-user"></i> Über mich</a></li>
-        <li><a href="#cv"><i class="fas fa-file-alt"></i> Lebenslauf</a></li>
-        <li><a href="#projects"><i class="fas fa-images"></i> Projekte</a></li>
-        <li><a href="#love"><i class="fa-solid fa-heart"></i>Hobby/Liebe</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Kontakt</a></li>
+       <!-- Hinweis in der Sidebar -->
+      <p class="accesskey-hint" aria-hidden="false">
+        <small><strong>Tipp:</strong> Drücke <kbd></kbd> für Tastenkürzel-Hilfe.</small>
+        <small>Oder drücke <button id="buttonAcces">Hier</button></small>
+      </p>
+      <!-- Tastenkürzel-Overlay -->
+      <div id="hilfe-overlay" class="hilfe-overlay" aria-hidden="true" style="display: none;">
+      <h2 id="hilfe-title">Tastenkombinationen</h2>
+  <ul>
+    <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1</kbd> bis <kbd>6</kbd>: Navigation zu Bereichen</li>
+    <li><kbd>→</kbd> / <kbd>←</kbd>: Bildslider (Boxen)</li>
+    <li><kbd>k</kbd> / <kbd>l</kbd>: Bildslider (Liebe)</li>
+    <li><kbd>-</kbd>: Hilfe ein-/ausblenden</li>
+    <li><kbd>Q</kbd>: Hilfe schließen</li>
+  </ul>
+</div>
+ 
+      <ul class="sidebar-nav" role="navigation" aria-label="Hauptnavigation">
+        <li><a href="#hero" accesskey="1"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about" accesskey="2"><i class="fas fa-user"></i> Über mich</a></li>
+        <li><a href="#cv" accesskey="3"><i class="fas fa-file-alt"></i> Lebenslauf</a></li>
+        <li><a href="#projects" accesskey="4"><i class="fas fa-images"></i> Projekte</a></li>
+        <li><a href="#love" accesskey="5"><i class="fa-solid fa-heart"></i> Hobby/Liebe</a></li>
+        <li><a href="#contact" accesskey="6"><i class="fas fa-envelope"></i> Kontakt</a></li>
       </ul>
+      
 
       <div class="socials">
         <a href="https://www.instagram.com/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -48,155 +77,279 @@
         <p>📱 +49 176 45994247</p>
       </div>
     </aside>
-
     <!-- Main Content -->
-    <main class="main-content">
+    <main id="main" class="main-content">
       <!-- Hero -->
-      <section id="hero" class="hero">
-        <h1>Hi, mein Name ist Alton und ich <span id="typed"></span></h1>
+      <section id="hero" class="hero fade-in-up">
+        <div class="hero-inner">
+          <h1>Hi, mein Name ist Alton und ich <span id="typed"></span></h1>
+          <a href="#projects" class="btn-hero">Sieh dir meine Projekte an</a>
+        </div>
       </section>
 
       <!-- Über mich -->
       <section id="about" class="section about-section">
-        <div class="about-content">
-          <div class="about-text">
-            <h2>Über mich</h2>
-            <p>
-              Ich bin Alton Bekolli, Informatikstudent an der Technischen Hochschule Ulm mit Schwerpunkt auf Mobile Application Development und Computer Engineering.
-              Durch mein Wahlfach „Game Programming mit Java“ konnte ich meine Kenntnisse im Bereich Softwareentwicklung noch weiter vertiefen.
-            </p>
-            <p>
-              Bereits während meiner Schulzeit habe ich erste Erfahrungen mit C# gesammelt und schnell meine Begeisterung für das Programmieren entdeckt. Seit April 2024 arbeite ich als Werkstudent bei der BITE GmbH und werde dort ab Mai mein Praxissemester absolvieren.
-            </p>
-            <p>
-              Ich habe bereits verschiedene Projekte realisiert, von mobilen Anwendungen bis zu modernen Webanwendungen, Spiele und verschiedene kleine Systeme und liebe es, Neues zu lernen, egal ob im Team oder alleine. Programmieren ist nicht nur mein Beruf, sondern meine Leidenschaft.
-            </p>
+        <!-- Über mich Text -->
+        <div class="about-text slide-in-left">
+          <h2>Über mich</h2>
+          <p>
+            Ich bin Alton Bekolli, Informatikstudent an der Technischen Hochschule Ulm mit Fokus auf Mobile Development und Computer Engineering.
+            Seit April 2024 bin ich Werkstudent bei der BITE GmbH und werde ab Mai mein Praxissemester dort absolvieren.
+          </p>
+          <p>
+            Schon in der Schulzeit habe ich mit C# programmiert und meine Leidenschaft fürs Coden entdeckt. Ich entwickle mobile Apps, Webseiten, kleine Systeme und liebe es, Neues zu lernen – egal ob alleine oder im Team.
+          </p>
+        </div>
+      
+        <!-- Skills + Filter -->
+        <div class="about-skills">
+          <h2>Meine Skills</h2>
+      
+          <label for="skill-filter"><strong>Filter:</strong></label>
+          <select id="skill-filter">
+            <option value="alle">Alle</option>
+            <option value="programmieren">Programmiersprachen</option>
+            <option value="design">Design-/Markupsprachen</option>
+            <option value="sonstiges">Sonstiges</option>
+          </select>
+      
+          <!-- Skills Liste -->
+          <div class="skill" data-category="sonstiges">
+            <span>Github/Gitlab</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="100%"></div>
+              </div>
+            </div>
           </div>
       
-          <div class="about-skills">
-            <h2>Meine Skills</h2>
-          
-            <label for="skill-filter"><strong>Filter:</strong></label>
-            <select id="skill-filter">
-              <option value="alle">Alle</option>
-              <option value="programmieren">Programmiersprachen</option>
-              <option value="design">Design-/Markupsprachen</option>
-              <option value="sonstiges">Sonstiges</option>
-            </select>            
-          
-            <div class="skill" data-category="sonstiges">
-              <span>Github/Gitlab</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="100%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="sonstiges">
-              <span>Microsoft Office</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="100%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="design">
-              <span>HTML / CSS</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="100%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="sonstiges">
-              <span>Sprachen: Albanisch, Englisch und Deutsch</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="85%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="programmieren">
-              <span>JavaScript / TypeScript</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="80%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="programmieren">
-              <span>Java</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="80%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="programmieren">
-              <span>C#</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="70%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="design">
-              <span>VHDL</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="60%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="programmieren">
-              <span>C / C++</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="50%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="programmieren">
-              <span>PHP</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="50%"></div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="skill" data-category="programmieren">
-              <span>Go</span>
-              <div class="skill-bar">
-                <div class="skill-fill-container">
-                  <div class="skill-fill" data-width="45%"></div>
-                </div>
+          <div class="skill" data-category="sonstiges">
+            <span>Microsoft Office</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="100%"></div>
               </div>
             </div>
           </div>
-          
-
-      <!-- Lebenslauf -->
-      <section id="cv" class="section">
-        <h2>Lebenslauf</h2>
-        <p>Hier kommt dein Lebenslauf rein.</p>
+      
+          <div class="skill" data-category="design">
+            <span>HTML / CSS</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="100%"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="skill" data-category="sonstiges">
+            <span>Sprachen: Albanisch, Englisch und Deutsch</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="skill" data-category="programmieren">
+            <span>JavaScript / TypeScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="skill" data-category="programmieren">
+            <span>Java</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="skill" data-category="programmieren">
+            <span>C#</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="70%"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="skill" data-category="design">
+            <span>VHDL</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="60%"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="skill" data-category="programmieren">
+            <span>C / C++</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="50%"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="skill" data-category="programmieren">
+            <span>PHP</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="50%"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="skill" data-category="programmieren">
+            <span>Go</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="45%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="projects" class="section">
+      <!-- Lebenslauf -->
+      <section id="cv" class="section fancy-cv fade-in-up">
+        <h2>Lebenslauf</h2>
+        <div class="cv-grid">
+      
+          <!-- Persönliche Daten (Flip-Card) -->
+          <div class="cv-card hover-flip">
+            <div class="cv-front">
+              <h3>📍 Persönliche Daten</h3>
+              <ul>
+                <li><strong>Geboren:</strong> 08.12.2003, Ulm</li>
+                <li><strong>Adresse:</strong> Reutlinger Straße 46, 89079 Ulm</li>
+                <li><strong>Email:</strong> Altonbekolli_1@web.de</li>
+                <li><strong>Telefon:</strong> +49 176 45994247</li>
+              </ul>
+            </div>
+            <div class="cv-back">
+              <h4>Kontaktiere mich gern 🚀</h4>
+              <p>Ich bin offen für neue Projekte und Herausforderungen.</p>
+              <p>Wenn du Unterstützung brauchst, <strong><a href="#contact">melde dich hier!</a></strong></p>
+            </div>
+          </div>
+      
+          <!-- Bildung -->
+          <div class="cv-card hover-glow">
+            <h3>🎓 Bildungsweg</h3>
+            <ul>
+              <li><strong>10/2022–07/2026:</strong> B.Sc Informatik – TH Ulm</li>
+              <li><strong>09/2020–06/2022:</strong> Fachhochschulreife – RBS Ulm</li>
+              <li><strong>09/2014–06/2020:</strong> Mittlere Reife – Realschule Ulm</li>
+            </ul>
+          </div>
+      
+          <!-- Soft Skills (mit Kreis-Progressbar) -->
+          <div class="cv-card hover-pulse">
+            <h3>💡 Soft Skills</h3>
+            <div class="circle-skill-grid">
+          
+              <!-- Kommunikation -->
+              <div class="circle-skill">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" data-percentage="97" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">97%</text>
+                </svg>
+                <p>Kommunikation</p>
+              </div>
+          
+              <!-- Organisation -->
+              <div class="circle-skill">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" data-percentage="100" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">100%</text>
+                </svg>
+                <p>Organisation</p>
+              </div>
+          
+              <!-- Teamfähigkeit -->
+              <div class="circle-skill">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" data-percentage="94" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">94%</text>
+                </svg>
+                <p>Teamfähigkeit</p>
+              </div>
+          
+              <!-- Kreativität -->
+              <div class="circle-skill">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" data-percentage="82" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">82%</text>
+                </svg>
+                <p>Kreativität</p>
+              </div>
+          
+              <!-- Programmieren -->
+              <div class="circle-skill">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" data-percentage="84" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">84%</text>
+                </svg>
+                <p>Programmieren</p>
+              </div>
+          
+              <!-- Stressresistenz -->
+              <div class="circle-skill">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                  <path class="circle-bg" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle" data-percentage="80" d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <text x="18" y="20.35" class="percentage">80%</text>
+                </svg>
+                <p>Stressresistenz</p>
+              </div>
+          
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+       <!-- Projekte -->
+      <section id="projects" class="section fade-in-up">
         <h2>Projekte</h2>
         <div class="headline-effect" id="headline-effect">KLICK MICH AN!</div>
         <div class="project-grid">
           <!-- STREET LEGEND ONLY -->
-          <a class="project-card" href="https://github.com/lxvro7/StreetLegends" target="_blank">
+          <a class="project-card fade-in-up" href="https://github.com/lxvro7/StreetLegends" target="_blank">
             <div class="media-wrapper">
               <img src="assets/game.png" alt="Street Legend Game">
             </div>
@@ -207,7 +360,7 @@
           </a>
       
           <!-- Weitere Projekte -->
-          <a class="project-card" href="https://github.com/Altonbekolli/booking-App" target="_blank">
+          <a class="project-card fade-in-up" href="https://github.com/Altonbekolli/booking-App" target="_blank">
             <div class="media-wrapper">
               <img src="assets/booking.png" alt="Go Conference Booking">
             </div>
@@ -217,7 +370,7 @@
             </div>
           </a>
       
-          <a class="project-card" href="http://firebot.vom-kuhberg.de" target="_blank">
+          <a class="project-card fade-in-up" href="http://firebot.vom-kuhberg.de" target="_blank">
             <div class="media-wrapper">
               <video src="assets/firebot.mp4" muted autoplay loop playsinline></video>
             </div>
@@ -227,7 +380,7 @@
             </div>
           </a>
       
-          <a class="project-card" href="https://github.com/Altonbekolli/forYourLove?tab=readme-ov-file" target="_blank">
+          <a class="project-card fade-in-up" href="https://github.com/Altonbekolli/forYourLove?tab=readme-ov-file" target="_blank">
             <div class="media-wrapper">
               <img src="assets/love.png" alt="For Your Love">
             </div>
@@ -240,7 +393,7 @@
       </section>
       
       <!-- Hobbys -->
-      <section class="hobby-section" id="love">
+      <section class="hobby-section fade-in-up" id="love">
         <h2>Hobby:Boxen</h2>
         <div class="hobby-content">
           <!-- Linke Seite: Bildslider -->
@@ -253,8 +406,8 @@
                 <img src="assets/kampf.jpeg" alt="Kampf" class="slider-img">
                 <img src="assets/adern.png" alt="Kampf" class="slider-img">
               </div>
-              <button class="prev-btn">&#10094;</button>
-              <button class="next-btn">&#10095;</button>
+              <button aria-label="Nächstes Bild" tabindex="0"  class="prev-btn">&#10094;</button>
+              <button aria-label="Nächstes Bild" tabindex="0" class="next-btn">&#10095;</button>
             </div>
           </div>
       
@@ -268,10 +421,10 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section fade-in-up">
         <h2>Die Liebe meines Lebens</h2>
         <div class="love-slider-container">
-          <button class="love-prev">&#10094;</button>
+          <button aria-label="Nächstes Bild" tabindex="0" class="love-prev">&#10094;</button>
       
           <div class="love-slider">
             <div class="love-slide active">
@@ -303,56 +456,58 @@
               </p>
             </div>
           </div>
-      
-          <button class="love-next">&#10095;</button>
+          <button  aria-label="Nächstes Bild" tabindex="0" class="love-next">&#10095;</button>
         </div>
       </section>
 
-      <section class="section" >
+      <section class="section fade-in-up" >
         <h2>Familie, mein größter Halt!</h2>
         <div class="family-grid">
-          <div class="family-photo">
+          <div class="family-photo fade-in-up">
             <img src="assets/fam.png" alt="Mama & Papa">
             <p>Meine Eltern ❤️ Die nichts außer liebe für mich hatten!</p>
           </div>
-          <div class="family-photo">
+          <div class="family-photo fade-in-up">
             <img src="assets/papa.png" alt="Familientreffen">
             <p>Mein Papa, der mich bei allem immer unterstützt hat.</p>
           </div>
-          <div class="family-photo">
+          <div class="family-photo fade-in-up">
             <img src="assets/familien.png" alt="Geschwister">
             <p>Meine ganze Familie, die mich auf all meine wege begleitet haben.</p>
           </div>
         </div>
       </section>
-      
-      
-      
 
       <!-- Kontakt -->
-      <div class="contact-wrapper" id="contact">
+      <div class="contact-wrapper fade-in-up" id="contact">
         <form id="kontakt-formular" class="glass-box" method="POST" action="send-mail.php">
           <h2>Kontaktformular</h2>
-      
+        
           <label for="anrede">Anrede:</label>
-          <select name="anrede" required>
-            <option>Herr</option>
-            <option>Frau</option>
-            <option>Divers</option>
-            <option>Anonym</option>
+          <select name="anrede" id="anrede-auswahl" required>
+            <option value="Herr">Herr</option>
+            <option value="Frau">Frau</option>
+            <option value="Divers">Divers</option>
+            <option value="Anonym">Anonym</option>
           </select>
-      
+        
           <div id="name-container">
             <label for="name">Name (optional):</label>
             <input type="text" name="name" placeholder="Max Mustermann">
           </div>
-          
+        
+          <div id="email-container">
+            <label for="email">E-Mail:</label>
+            <input type="email" aria-describedby="email-hinweis" aria-required="true" name="email" id="email" placeholder="beispiel@mail.de" required>
+            <small id="email-hinweis">Du erhältst eine Antwort an diese Adresse.</small>
+          </div>
+        
           <label for="betreff">Ich schreibe wegen:</label>
           <select name="betreff" id="betreff-auswahl" required>
             <option value="Feedback">Feedback</option>
             <option value="Zusammenarbeit">Zusammenarbeit</option>
           </select>
-      
+        
           <div id="projekt-typ-container" style="display: none;">
             <label for="projektTyp">Projekt-Typ:</label>
             <select name="projektTyp">
@@ -361,12 +516,13 @@
               <option value="Andere">Andere Projekte</option>
             </select>
           </div>
-      
+        
           <label for="nachricht">Nachricht:</label>
           <textarea name="nachricht" required></textarea>
-      
+        
           <button type="submit">Absenden</button>
         </form>
+        
       
         <div id="danke-message" class="hidden-message">
            <span id="feedback-response">Vielen Dank für deine Nachricht!</span>
@@ -374,7 +530,7 @@
       </div>
       
       <!-- Footer -->
-      <footer class="footer">
+      <footer class="footer" role="contentinfo">
         <div class="socials">
           <a href="https://www.instagram.com/?next=%2F" target="_blank">Instagram</a>
           <a href="https://www.facebook.com" target="_blank">Facebook</a>
