@@ -21,6 +21,9 @@ const accessButton = document.getElementById('buttonAcces');
 const headline = document.getElementById("headline-effect");
 const filterSelect = document.getElementById("skill-filter");
 const skillItems = document.querySelectorAll(".skill");
+const sections = document.querySelectorAll("section[id], .contact-wrapper");
+const navLinks = document.querySelectorAll(".sidebar-nav a");
+
 
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
@@ -248,3 +251,26 @@ document.querySelectorAll(".circle").forEach(circle => {
     }
   });
 });
+
+const sectionObserver = new IntersectionObserver(
+  entries => {
+    let visibleSections = entries.filter(entry => entry.isIntersecting);
+    if (visibleSections.length > 0) {
+      //  zuletzt sichtbare Section ganz oben priorisieren
+      visibleSections.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      const id = visibleSections[0].target.getAttribute("id");
+      if (!id) return;
+
+      navLinks.forEach(link => link.classList.remove("active-section"));
+      const activeLink = document.querySelector(`.sidebar-nav a[href="#${id}"]`);
+      if (activeLink) activeLink.classList.add("active-section");
+    }
+  },
+  {
+    root: null,
+    rootMargin: '0px 0px -50% 0px',
+    threshold: 0.25,
+  }
+);
+
+sections.forEach(section => sectionObserver.observe(section));
