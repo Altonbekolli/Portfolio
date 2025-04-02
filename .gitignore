@@ -1,5 +1,4 @@
 # PHP / E-Mail
-send-mail.php
 vendor/
 composer.lock
 composer.json
