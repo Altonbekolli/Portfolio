@@ -523,9 +523,10 @@
 
       <!-- Kontakt -->
       <div class="contact-wrapper fade-in-up" id="contact">
-        <form id="kontakt-formular" class="glass-box" method="POST" action="send-mail.php">
+        <form id="kontakt-formular" class="glass-box" name="kontakt" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="kontakt" />
           <h2>Kontaktformular</h2>
-        
+      
           <label for="anrede">Anrede:</label>
           <select name="anrede" id="anrede-auswahl" required>
             <option value="Herr">Herr</option>
@@ -533,24 +534,24 @@
             <option value="Divers">Divers</option>
             <option value="Anonym">Anonym</option>
           </select>
-        
+      
           <div id="name-container">
             <label for="name">Name (optional):</label>
             <input type="text" name="name" placeholder="Max Mustermann">
           </div>
-        
+      
           <div id="email-container">
             <label for="email">E-Mail:</label>
             <input type="email" aria-describedby="email-hinweis" aria-required="true" name="email" id="email" placeholder="beispiel@mail.de" required>
             <small id="email-hinweis">Du erhältst eine Antwort an diese Adresse.</small>
           </div>
-        
+      
           <label for="betreff">Grund der Kontaktaufnahme:</label>
           <select name="betreff" id="betreff-auswahl" required>
             <option value="Feedback">Feedback</option>
             <option value="Zusammenarbeit">Zusammenarbeit</option>
           </select>
-        
+      
           <div id="projekt-typ-container" style="display: none;">
             <label for="projektTyp">Projekt-Typ:</label>
             <select name="projektTyp">
@@ -559,19 +560,18 @@
               <option value="Andere">Andere Projekte</option>
             </select>
           </div>
-        
+      
           <label for="nachricht">Nachricht:</label>
           <textarea name="nachricht" required></textarea>
-        
+      
           <button type="submit">Absenden</button>
         </form>
-        
       
         <div id="danke-message" class="hidden-message">
-           <span id="feedback-response">Vielen Dank für deine Nachricht!</span>
+          <span id="feedback-response">Vielen Dank für deine Nachricht!</span>
         </div>
       </div>
-      
+            
       <!-- Footer -->
       <footer class="footer" role="contentinfo">
         <div class="socials">
