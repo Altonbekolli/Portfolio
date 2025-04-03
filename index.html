@@ -524,7 +524,7 @@
       <!-- Kontakt -->
       <div class="contact-wrapper fade-in-up" id="contact">
         <form id="kontakt-formular" class="glass-box" name="kontakt" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="kontakt" />
+          <input type="hidden" name="form-name" value="kontakt" />        
           <h2>Kontaktformular</h2>
       
           <label for="anrede">Anrede:</label>
@@ -571,7 +571,15 @@
           <span id="feedback-response">Vielen Dank für deine Nachricht!</span>
         </div>
       </div>
-            
+
+      <form name="kontakt-test" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="kontakt-test">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="nachricht" placeholder="Nachricht"></textarea>
+        <button type="submit">Absenden</button>
+      </form>
+      
       <!-- Footer -->
       <footer class="footer" role="contentinfo">
         <div class="socials">
