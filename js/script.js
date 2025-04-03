@@ -185,26 +185,22 @@ accessButton.addEventListener('click', () => {
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+
   const formData = new FormData(form);
 
-  fetch("send-mail.php", {
+  fetch("/", {
     method: "POST",
-    body: formData
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
   })
-    .then(res => res.json())
-    .then(data => {
-      if (data.status === "success") {
-        dankeMessage.innerText = data.message;
-        dankeMessage.style.display = "block";
-        form.reset();
-        projektTypContainer.style.display = "none";
-      } else {
-        alert("Fehler: " + data.message);
-      }
+    .then(() => {
+      form.style.display = "none";
+      dankeMessage.style.display = "block";
+      form.reset();
+      projektTypContainer.style.display = "none";
     })
-    .catch((err) => {
-      alert("Es ist ein Fehler aufgetreten.");
-      console.error(err);
+    .catch((error) => {
+      alert("Fehler beim Senden: " + error.message);
     });
 });
 
@@ -274,3 +270,31 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach(section => sectionObserver.observe(section));
+
+//php
+/*
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+
+  fetch("send-mail.php", {
+    method: "POST",
+    body: formData
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.status === "success") {
+        dankeMessage.innerText = data.message;
+        dankeMessage.style.display = "block";
+        form.reset();
+        projektTypContainer.style.display = "none";
+      } else {
+        alert("Fehler: " + data.message);
+      }
+    })
+    .catch((err) => {
+      alert("Es ist ein Fehler aufgetreten.");
+      console.error(err);
+    });
+});
+*/ 
