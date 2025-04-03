@@ -194,8 +194,7 @@ form.addEventListener("submit", function (e) {
     body: new URLSearchParams(formData).toString()
   })
     .then(() => {
-      form.style.display = "none";
-      dankeMessage.style.display = "block";
+      fdankeMessage.style.display = "block";
       form.reset();
       projektTypContainer.style.display = "none";
     })
