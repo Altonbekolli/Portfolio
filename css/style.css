@@ -1268,7 +1268,7 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   }
   .family-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     justify-items: center;
   }
@@ -1299,7 +1299,7 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
     font-size: 2rem;
   }
 
-  h2 {
+  .section h2 {
     font-size: 1.5rem;
   }
 
@@ -1408,6 +1408,16 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
     transition: opacity 0.6s ease-in-out;
     border-radius: 1rem;
   }
+  .video-wrapper video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    max-width: 100%;
+    background-color: black; /* optional, falls kein Frame sichtbar */
+  }
+  
     
   .slider-img.active {
     opacity: 1;
@@ -1465,6 +1475,8 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   .about-section {
       gap: 1.5rem;
   }
+
+  
   /*Lebenslauf*/
   .cv-section {
     grid-template-columns: 1fr;
@@ -1474,7 +1486,8 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   }
   /*projekte*/
   .project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
   
   /*liebe block*/
@@ -1515,6 +1528,8 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
     line-height: 1.5;
   }
 
+  /*Schriftgrößen*/
+
   body {
     font-size: 14px;
   }
@@ -1523,7 +1538,7 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
     font-size: 1.8rem;
   }
 
-  h2 {
+  .section h2 {
     font-size: 1.4rem;
   }
 
