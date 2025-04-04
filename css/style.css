@@ -1294,13 +1294,15 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   body {
     font-size: 15px;
   }
-
+  .sidebar h1{
+    font-size:19px;
+  }
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .section h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   h3 {
@@ -1533,17 +1535,19 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   body {
     font-size: 14px;
   }
-
-  .hero h1 {
-    font-size: 1.8rem;
+  .sidebar h1{
+    font-size:15px;
   }
-
-  .section h2 {
+  .hero h1 {
     font-size: 1.4rem;
   }
 
-  h3 {
+  .section h2 {
     font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
   }
 
   p, li, a, label, input, select, textarea {
