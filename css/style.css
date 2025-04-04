@@ -1280,7 +1280,6 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
 
   .family-photo img {
     width: 100%;
-    height: auto;
     object-fit: cover;
   }
 
@@ -1417,10 +1416,10 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
     object-fit: cover;
     border-radius: 1rem;
     max-width: 100%;
-    background-color: black; /* optional, falls kein Frame sichtbar */
+    background-color: black; 
   }
   
-    
+  
   .slider-img.active {
     opacity: 1;
     z-index: 1;
