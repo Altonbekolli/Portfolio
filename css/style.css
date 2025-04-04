@@ -1519,7 +1519,6 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
 
   .family-photo img {
     width: 100%;
-    height: auto;
     object-fit: cover;
     border-radius: 12px;
   }
