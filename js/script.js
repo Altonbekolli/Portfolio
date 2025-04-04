@@ -174,7 +174,10 @@ window.addEventListener("load", () => {
       glassBox.classList.add("visible");
     }, 100);
   }
+
+  document.body.classList.add("loaded");
 });
+
 
 accessButton.addEventListener('click', () => {
   const isVisible = hilfeOverlay.style.display !== 'none';
