@@ -6,7 +6,7 @@
     <meta name="description" content="Portfolio von Alton Bekolli – Webentwickler, Mobile Developer und Informatikstudent aus Ulm.">
     <meta name="author" content="Alton Bekolli">
     <meta name="robots" content="index, follow">
-
+    <meta name="format-detection" content="telephone=no, email=no, address=no, date=no">
     <title>Alton Bekolli | Portfolio</title>
   
     <!-- Fonts -->
@@ -14,7 +14,8 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"></noscript>
   
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   
     <!-- Animation Libraries -->
@@ -77,8 +78,8 @@
 
       <div class="contact-info">
         <p><strong>📍 Ulm</strong></p>
-        <p>📧 Altonbekolli_1@web.de</p>
-        <p>📱 +49 176 45994247</p>
+        <p>📧 <a href="mailto:Altonbekolli_1@web.de">Altonbekolli_1@web.de</a></p>
+        <p>📱 <a href="tel:+4917645994247">+49 176 45994247</a></p>
       </div>
     </aside>
     <!-- Main Content -->
@@ -249,11 +250,12 @@
           <div class="cv-card hover-glow">
             <h3>🎓 Bildungsweg</h3>
             <ul>
-              <li><strong>10/2022–07/2026:</strong> B.Sc Informatik – TH Ulm</li>
-              <li><strong>09/2020–06/2022:</strong> Fachhochschulreife – RBS Ulm</li>
-              <li><strong>09/2014–06/2020:</strong> Mittlere Reife – Realschule Ulm</li>
+              <li><strong><span class="no-detect">10/2022–07/2026</span>:</strong> B.Sc Informatik – TH Ulm</li>
+              <li><strong><span class="no-detect">09/2020–06/2022</span>:</strong> Fachhochschulreife – RBS Ulm</li>
+              <li><strong><span class="no-detect">09/2014–06/2020</span>:</strong> Mittlere Reife – Realschule Ulm</li>
             </ul>
           </div>
+
       
           <!-- Soft Skills (mit Kreis-Progressbar) -->
           <div class="cv-card hover-pulse">
@@ -581,8 +583,9 @@
           <a href="https://github.com/Altonbekolli" target="_blank">GitHub</a>
           <a href="https://www.linkedin.com/in/alton-bekolli-3203b335a/" target="_blank">LinkedIn</a>
         </div>
-        <p>📞 +49 176 45994247<br />✉️ Altonbekolli_1@web.de</p>
-      </footer>
+        <p>📞 <a href="tel:+4917645994247">+49 176 45994247</a><br />
+          ✉️ <a href="mailto:Altonbekolli_1@web.de">Altonbekolli_1@web.de</a></p>
+       </footer>
     </main>
   </div>
 </body>
