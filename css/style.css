@@ -361,7 +361,7 @@ html, body {
 
 
 
-/*fragwürdig, kein plan erstmal*/
+/*fragwürdig*/
 .about-me, .skills {
   flex: 1 1 45%;
   min-width: 300px;
@@ -381,7 +381,7 @@ html, body {
 /*Haupteinstellung für section*/
 .section {
   max-width: 1100px;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
 }
 
 /*Alles außer sidebar*/
@@ -452,9 +452,7 @@ main.main-content {
   box-shadow: 0 6px 25px rgba(0, 223, 196, 0.5);
 }
 
-
 /*Über mich block LINKS*/
-
 .about-section {
   display: flex;
   flex-wrap: wrap;
@@ -817,10 +815,6 @@ main.main-content {
   border-bottom: 2px solid #00dfc4;
   font-size: 2rem;
   margin-bottom: 1rem;
-}
-
-.hobby-section {
-  max-width: 1100px;
 }
 
 @keyframes glow {
@@ -1235,6 +1229,33 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .family-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .family-photo {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  .family-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .family-photo p {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
 
 @media (max-width: 1100px) {
   .layout {
@@ -1278,10 +1299,6 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
     margin-left: 0;
     width: 100%;
     overflow-x: hidden;
-  }
-
-  .section {
-    padding: 2rem 0;
   }
 
   .about-section {
@@ -1408,23 +1425,30 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
     height: auto;
   }
    /*Famiöie block*/
-   .family-photo {
-    flex: 1 1 30%;    
-    max-width: 30%;
-  }
-  .family-grid {
-    justify-content: center;
-  }
-  .family-grid {
+   .family-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
+    padding: 0 1rem;
   }
+
+  .family-photo {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+  }
+
   .family-photo img {
-    width: 73%;
-    height: 50%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    margin: 10px auto;
-    }
- 
+    border-radius: 12px;
+  }
+
+  .family-photo p {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
