@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://altonbekolli-portfolio.netlify.app/sitemap.xml
