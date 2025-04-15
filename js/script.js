@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     new Typed("#typed", {
       strings: [
-        "freue mich, dich auf meiner Webseite begrüßen zu dürfen.",
+        "ich freue mich, dich auf meiner Webseite begrüßen zu dürfen.",
         "meine Leidenschaft ist das Programmieren.",
         "ich arbeite als Webentwickler.",
       ],
