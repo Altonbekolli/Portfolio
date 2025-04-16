@@ -1,7 +1,13 @@
 [build]
-  publish = "."
+  publish = "./"  # Root-Verzeichnis deines Projekts
+  command = ""
 
 [[redirects]]
   from = "/sitemap.xml"
   to = "/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
