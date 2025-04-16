@@ -1,11 +1,11 @@
 [build]
-  publish = "./"  # Root-Verzeichnis deines Projekts
+  publish = "public"
   command = ""
 
-[[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap.xml"
-  status = 200
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
 
 [[redirects]]
   from = "/*"
