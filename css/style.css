@@ -1010,6 +1010,8 @@ main.main-content {
   position: relative;
   max-width: 800px;
   overflow: hidden;
+  display: block!important;
+  margin:0 auto!important;
 }
 
 .love-slider {
@@ -1075,16 +1077,16 @@ main.main-content {
 }
 
 .love-prev {
-  left: 10px;
+  left: 7rem;
 }
 .love-next {
-  right: 13rem;
+  right: 7rem;
 }
 
 .love-caption.single-line {
   position: absolute;
   bottom: 10%;
-  left: 35%;
+  left: 51%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.5);
   padding: 6px 14px;
@@ -1252,6 +1254,7 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   overflow-x: hidden;
   height: auto;
   display: block;
+  margin:0 auto;
 }
 
 
@@ -1441,7 +1444,10 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   .love-next {
     right: 1rem;
   }
-
+  .love-prev {
+    left: 10px;
+  }
+  
   .love-caption.single-line {
     left: 50%;
     font-size: 0.9rem;
