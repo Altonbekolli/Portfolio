@@ -37,6 +37,10 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   
     <!-- Custom Script -->
+    <script defer src="js/navigation.js"></script>
+    <script defer src="js/animation.js"></script>
+    <script defer src="js/contact.js"></script>
+    <script defer src="js/slider.js"></script>
     <script defer src="js/script.js"></script>
   </head>  
 <body>
@@ -206,6 +210,15 @@
             </div>
           </div>
 
+          <div class="skill" data-category="betriebssysteme">
+            <span>Windows</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+
           <div class="skill" data-category="programmieren">
             <span>Go</span>
             <div class="skill-bar">
@@ -222,11 +235,30 @@
               </div>
             </div>
           </div>
+
+          <div class="skill" data-category="framework">
+            <span>Razor Pages</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+
           <div class="skill" data-category="framework">
             <span>Echo (Go)</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
                 <div class="skill-fill" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="framework">
+            <span>ASP.NET Core</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="70%"></div>
               </div>
             </div>
           </div>
@@ -249,12 +281,39 @@
               </div>
             </div>
           </div>
+
+          <div class="skill" data-category="sonstiges">
+            <span>Arbeiten mit der GPU</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="65%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="programmieren">
+            <span>Rust</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="60%"></div>
+              </div>
+            </div>
+          </div>
       
           <div class="skill" data-category="design">
             <span>VHDL</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
                 <div class="skill-fill" data-width="60%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="framework">
+            <span>OpenGL</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="50%"></div>
               </div>
             </div>
           </div>
@@ -288,7 +347,7 @@
           <!-- Persönliche Daten (Flip-Card) -->
           <div class="cv-card hover-flip">
             <div class="cv-front hover-pulse">
-              <h3>📍 Persönliche Daten</h3>
+              <h3>Persönliche Daten</h3>
               <ul>
                 <li><strong>Geboren:</strong> 08.12.2003, Ulm</li>
                 <li><strong>Wohnort:</strong> Ulm, Wiblingen</li>
@@ -305,7 +364,7 @@
       
           <!-- Bildung -->
           <div class="cv-card hover-glow">
-            <h3>🎓 Bildungsweg</h3>
+            <h3>Bildungsweg</h3>
             <ul>
               <li><strong><span class="no-detect">10/2022–07/2026</span>:</strong> B.Sc Informatik – TH Ulm</li>
               <li><strong><span class="no-detect">09/2020–06/2022</span>:</strong> Fachhochschulreife – RBS Ulm</li>
@@ -316,7 +375,7 @@
       
           <!-- Soft Skills (mit Kreis-Progressbar) -->
           <div class="cv-card hover-pulse">
-            <h3>💡 Soft Skills</h3>
+            <h3>Soft Skills</h3>
             <div class="circle-skill-grid">
           
               <!-- Kommunikation -->
@@ -415,7 +474,7 @@
         <div class="headline-effect" id="headline-effect">KLICK MICH AN!</div>
         <div class="project-grid">
           <!-- STREET LEGEND ONLY -->
-          <a class="project-card fade-in-up" href="https://github.com/lxvro7/StreetLegends" target="_blank">
+          <a class="project-card fade-in-up" href="https://github.com/Altonbekolli/StreetLegendsFX" target="_blank">
             <div class="media-wrapper">
               <img src="assets/game.png" alt="Street Legend Game">
             </div>
@@ -426,15 +485,7 @@
           </a>
       
           <!-- Weitere Projekte -->
-          <a class="project-card fade-in-up" href="https://github.com/Altonbekolli/booking-App" target="_blank">
-            <div class="media-wrapper">
-              <img src="assets/bookingNeu.png" alt="Go Conference Booking">
-            </div>
-            <div class="project-info">
-              <h3>Go Conference Booking</h3>
-              <p>Ein Buchungssystem mit HTML, CSS, JS & Go.</p>
-            </div>
-          </a>
+
       
           <a class="project-card fade-in-up" href="http://firebot.vom-kuhberg.de" target="_blank">
             <div class="media-wrapper">
@@ -445,16 +496,27 @@
               <p>Ein Roboter, der Feuer mit Wasser löscht.Mit C programmiert.</p>
             </div>
           </a>
-      
-          <a class="project-card fade-in-up" href="https://github.com/Altonbekolli/forYourLove?tab=readme-ov-file" target="_blank">
+
+          <a class="project-card fade-in-up" href="https://github.com/Lyro7/Raytracer" target="_blank">
             <div class="media-wrapper">
-              <img src="assets/love.png" alt="For Your Love">
+              <img src="assets/ray.png" alt="Raytraycer">
             </div>
             <div class="project-info">
-              <h3>For Your Love</h3>
-              <p>Berechne deine Beziehungsdauer.Mit HTML,CSS & JS.</p>
+              <h3>Raytracer</h3>
+              <p>C++ Raytracer mit OpenGL, ImGui und GPU-basiertem Rendering</p>
             </div>
           </a>
+
+         <a class="project-card fade-in-up" href="assets/Seminar.pdf" target="_blank">
+            <div class="media-wrapper">
+              <img src="assets/rust.webp" alt="Raytraycer">
+            </div>
+            <div class="project-info">
+              <h3>Seminararbeit</h3>
+              <p>Untersuchung von Rusts Memory Safety ohne Garbage Collection.</p>
+            </div>
+          </a>
+    
 
           <a class="project-card fade-in-up" href="assets/Doku.pdf" target="_blank">
             <div class="media-wrapper">
@@ -474,6 +536,16 @@
               <p>Mit HTML,CSS,SCSS,JS,TS,React,<br>Preact,Go,Vite,Elastic UI,PostgreSQL</p>
             </div>
           </a>
+
+          <a class="project-card fade-in-up" href="#" target="_blank">
+            <div class="media-wrapper">
+              <img src="assets/bachelorarbeit.jpg" alt="Bachelorarbeit THU Cloud Manager">
+            </div>
+            <div class="project-info">
+              <h3>Bachelorarbeit THU Cloud Manager</h3>
+              <p>C#, Blazor, ASP.NET Core, Fluent UI. Comming soon!</p>
+            </div>
+          </a>
           
         </div>
         <div class="dev-tools-inline">
@@ -491,6 +563,14 @@
             <a href="https://www.jetbrains.com/clion/" target="_blank" title="CLion">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clion/clion-original.svg" alt="CLion" />
             </a>
+            <a href="https://www.jetbrains.com/go/" target="_blank" title="GoLand">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="GoLand" />
+            </a>
+
+            <a href="https://www.jetbrains.com/datagrip/" target="_blank" title="DataGrip">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/datagrip/datagrip-original.svg" alt="DataGrip" />
+            </a>
+
             <a href="https://visualstudio.microsoft.com/" target="_blank" title="Visual Studio">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio" />
             </a>
@@ -582,6 +662,14 @@
               <p class="love-caption single-line">
                 <p class="love-caption single-line">📍 Verlobungsfeier, 03.05.2025</p>
 
+              </p>
+            </div>
+
+            <div class="love-slide">
+              <img src="assets/mykonos2.jpeg" alt="Bild 6">
+              <p class="love-caption single-line">
+                <p class="love-caption single-line">📍 Mykonos, Griechenland, 10/2025</p>
+                
               </p>
             </div>
           </div>
