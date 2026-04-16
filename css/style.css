@@ -828,7 +828,7 @@ main.main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .project-info h3 {
