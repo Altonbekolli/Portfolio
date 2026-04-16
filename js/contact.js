@@ -7,6 +7,7 @@ function initContactForm() {
   const projektTypContainer = document.getElementById("projekt-typ-container");
   const form = document.getElementById("kontakt-formular");
   const dankeMessage = document.getElementById("danke-message");
+  let successMessageTimeout;
 
   if (!form || !anredeAuswahl || !betreffAuswahl || !emailFeld || !name || !emailContainer || !projektTypContainer || !dankeMessage) {
     return;
@@ -43,21 +44,28 @@ function initContactForm() {
     projektTypContainer.style.display = sollZeigen ? "block" : "none";
   });
 
-  form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const formData = new FormData(form);
 
     submitContactForm(formData)
-      .then(() => {
+        .then(() => {
+        dankeMessage.textContent = "Die Nachricht wurde erfolgreich abgeschickt.";
         dankeMessage.style.display = "block";
+
         form.reset();
         projektTypContainer.style.display = "none";
-      })
-      .catch((error) => {
+
+        clearTimeout(successMessageTimeout);
+        successMessageTimeout = setTimeout(() => {
+            dankeMessage.style.display = "none";
+        }, 5000);
+        })
+        .catch((error) => {
         alert("Fehler beim Senden: " + error.message);
-      });
-  });
+        });
+    });
 }
 
 function submitContactForm(formData) {
