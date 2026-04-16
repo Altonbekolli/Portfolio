@@ -4,11 +4,11 @@ function initAnimations() {
 
   setTimeout(() => {
     new Typed("#typed", {
-      strings: [
+        strings: [
         "ich freue mich, dich auf meiner Webseite begrüßen zu dürfen.",
         "meine Leidenschaft ist das Programmieren.",
-        "ich arbeite als Webentwickler.",
-      ],
+        "ich arbeite als Full Stack Entwickler mit Fokus auf Web und Backend Systeme.",
+        ],
       typeSpeed: 40,
       backSpeed: 25,
       backDelay: 1500,
