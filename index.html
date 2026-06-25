@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="de">
+
+
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-    <meta name="description" content="Ich bin Alton Bekolli, Full Stack Entwickler & Informatikstudent aus Ulm. Ich programmiere moderne Webseiten mit JavaScript, TypeScript, HTML, CSS und entwickle Backends mit Java, C++, C#, PHP und Go.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Alton Bekolli",
+      "jobTitle":"Full Stack Entwickler",
+      "url":"https://altonbekolli-portfolio.netlify.app",
+      "image":"https://altonbekolli-portfolio.netlify.app/assets/profil.jpeg",
+      "sameAs":[
+        "https://github.com/Altonbekolli",
+        "https://www.linkedin.com/in/alton-bekolli-3203b335a/"
+      ]
+    }
+    </script>
+
+    <meta name="description" content="Portfolio von Alton Bekolli, Full Stack Entwickler aus Ulm. Projekte mit C#, Blazor, ASP.NET Core, React, TypeScript, Go und PostgreSQL.">
     <meta name="keywords" content="Alton Bekolli, Full Stack Entwickler Ulm, Programmierer Ulm, Webentwickler, JavaScript, TypeScript, Java, C++, Go, C#, PHP, Informatikstudent Ulm, Webseiten erstellen Ulm, App Entwicklung">
 
     <!-- Autor & Robots -->
     <meta name="author" content="Alton Bekolli">
     <meta name="robots" content="index, follow">
     <meta name="format-detection" content="telephone=no, email=no, address=no, date=no">
+
+    <link rel="canonical" href="https://altonbekolli-portfolio.netlify.app/">
+    <meta property="og:site_name" content="Alton Bekolli Portfolio">
+    <meta name="theme-color" content="#00d6c9">
     
     <!-- Page Title -->
-    <title>Alton Bekolli | Webentwickler Portfolio</title>
+    <title>Alton Bekolli | Full Stack Entwickler aus Ulm. Portfolio</title>
   
     <!-- Social Media Preview (Open Graph) -->
     <meta property="og:title" content="Alton Bekolli Portfolio Webentwickler & App Developer" />
-    <meta property="og:description" content="Schau dir mein Portfolio an: React-Apps kreative Web und Backend Entwicklungen alles von mir, Alton Bekolli aus Ulm." />
-    <meta property="og:url" content="https://altonbekolli-portfolio.netlify.app" />
+    <meta property="og:description"content="Portfolio von Alton Bekolli. Full Stack Entwickler aus Ulm mit Projekten in C#, Blazor, React, Go, TypeScript und ASP.NET Core.">    <meta property="og:url" content="https://altonbekolli-portfolio.netlify.app" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://altonbekolli-portfolio.netlify.app/assets/vorschau.png" /> 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alton Bekolli | Full Stack Entwickler">
+    <meta name="twitter:description" content="Portfolio mit Web, Backend und Softwareprojekten.">
+    <meta name="twitter:image" content="https://altonbekolli-portfolio.netlify.app/assets/vorschau.png">
   
     <!-- Fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" onload="this.rel='stylesheet'">
@@ -32,9 +57,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   
     <!-- Animation Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   
     <!-- Custom Script -->
     <script defer src="js/navigation.js"></script>
@@ -78,25 +106,36 @@
 </div>
  
       <ul class="sidebar-nav" role="navigation" aria-label="Hauptnavigation">
-        <li><a href="#hero" accesskey="1"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="#about" accesskey="2"><i class="fas fa-user"></i> Über mich</a></li>
-        <li><a href="#cv" accesskey="3"><i class="fas fa-file-alt"></i> Lebenslauf</a></li>
-        <li><a href="#projects" accesskey="4"><i class="fas fa-images"></i> Projekte</a></li>
-        <li><a href="#love" accesskey="5"><i class="fa-solid fa-heart"></i> Hobby/Liebe</a></li>
-        <li><a href="#contact" accesskey="6"><i class="fas fa-envelope"></i> Kontakt</a></li>
+        <li><a href="#hero" accesskey="1"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+        <li><a href="#about" accesskey="2"><i class="fas fa-user" aria-hidden="true"></i> Über mich</a></li>
+        <li><a href="#cv" accesskey="3"><i class="fas fa-file-alt" aria-hidden="true"></i> Lebenslauf</a></li>
+        <li><a href="#projects" accesskey="4"><i class="fas fa-images" aria-hidden="true"></i> Projekte</a></li>
+        <li><a href="#love" accesskey="5"><i class="fa-solid fa-heart" aria-hidden="true"></i> Hobby/Liebe</a></li>
+        <li><a href="#contact" accesskey="6"><i class="fas fa-envelope" aria-hidden="true"></i> Kontakt</a></li>
       </ul>
 
       <div class="socials">
-        <a href="https://www.instagram.com/?next=%2F" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://github.com/Altonbekolli" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/alton-bekolli-3203b335a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/?next=%2F" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" rel="noopener noreferrer">
+          <i class="fab fa-facebook" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://github.com/Altonbekolli" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/alton-bekolli-3203b335a/" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
       </div>
 
       <div class="contact-info">
-        <p><strong>📍 Ulm</strong></p>
-        <p>📧 <a href="mailto:Altonbekolli_1@web.de">Altonbekolli_1@web.de</a></p>
-        <p>📱 <a href="tel:+4917645994247">+49 176 45994247</a></p>
+        <p><strong>Ulm</strong></p>
+        <p><a href="mailto:Altonbekolli_1@web.de">Altonbekolli_1@web.de</a></p>
+        <p><a href="tel:+4917645994247">+49 176 45994247</a></p>
       </div>
     </aside>
     <!-- Main Content -->
@@ -167,28 +206,20 @@
             </div>
           </div>
       
-          <div class="skill" data-category="sonstiges">
-            <span>Sprachen: Albanisch, Englisch und Deutsch</span>
-            <div class="skill-bar">
-              <div class="skill-fill-container">
-                <div class="skill-fill" data-width="85%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="skill" data-category="datenbank">
-            <span>PostgreSQL</span>
-            <div class="skill-bar">
-              <div class="skill-fill-container">
-                <div class="skill-fill" data-width="85%"></div>
-              </div>
-            </div>
-          </div>
-      
           <div class="skill" data-category="programmieren">
             <span>JavaScript / TypeScript</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
-                <div class="skill-fill" data-width="85%"></div>
+                <div class="skill-fill" data-width="95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="datenbank">
+            <span>PostgreSQL</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="90%"></div>
               </div>
             </div>
           </div>
@@ -197,15 +228,16 @@
             <span>React / Preact</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
-                <div class="skill-fill" data-width="80%"></div>
+                <div class="skill-fill" data-width="90%"></div>
               </div>
             </div>
           </div>
+
           <div class="skill" data-category="betriebssysteme">
             <span>Linux</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
-                <div class="skill-fill" data-width="80%"></div>
+                <div class="skill-fill" data-width="90%"></div>
               </div>
             </div>
           </div>
@@ -214,7 +246,35 @@
             <span>Windows</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
-                <div class="skill-fill" data-width="75%"></div>
+                <div class="skill-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="programmieren">
+            <span>C#</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="sonstiges">
+            <span>Sprachen: Albanisch, Englisch und Deutsch</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="skill" data-category="framework">
+            <span>ASP.NET Core</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="85%"></div>
               </div>
             </div>
           </div>
@@ -240,7 +300,7 @@
             <span>Razor Pages</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
-                <div class="skill-fill" data-width="75%"></div>
+                <div class="skill-fill" data-width="80%"></div>
               </div>
             </div>
           </div>
@@ -249,29 +309,10 @@
             <span>Echo (Go)</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
-                <div class="skill-fill" data-width="75%"></div>
+                <div class="skill-fill" data-width="80%"></div>
               </div>
             </div>
           </div>
-
-          <div class="skill" data-category="framework">
-            <span>ASP.NET Core</span>
-            <div class="skill-bar">
-              <div class="skill-fill-container">
-                <div class="skill-fill" data-width="70%"></div>
-              </div>
-            </div>
-          </div>
-      
-          <div class="skill" data-category="programmieren">
-            <span>C#</span>
-            <div class="skill-bar">
-              <div class="skill-fill-container">
-                <div class="skill-fill" data-width="70%"></div>
-              </div>
-            </div>
-          </div>
-          
       
           <div class="skill" data-category="framework">
             <span>Elastic UI</span>
@@ -489,7 +530,7 @@
       
           <a class="project-card fade-in-up" href="http://firebot.vom-kuhberg.de" target="_blank">
             <div class="media-wrapper">
-              <video src="assets/firebot.mp4" muted autoplay loop playsinline></video>
+              <video src="assets/firebot.mp4" muted autoplay loop playsinline preload="metadata"></video>
             </div>
             <div class="project-info">
               <h3>Firebot</h3>
@@ -499,7 +540,7 @@
 
           <a class="project-card fade-in-up" href="https://github.com/Lyro7/Raytracer" target="_blank">
             <div class="media-wrapper">
-              <img src="assets/ray.png" alt="Raytraycer">
+              <img loading="lazy" src="assets/ray.png" alt="Raytraycer">
             </div>
             <div class="project-info">
               <h3>Raytracer</h3>
@@ -509,7 +550,7 @@
 
          <a class="project-card fade-in-up" href="assets/Seminar.pdf" target="_blank">
             <div class="media-wrapper">
-              <img src="assets/rust.webp" alt="Raytraycer">
+              <img loading="lazy" src="assets/rust.webp" alt="Raytraycer">
             </div>
             <div class="project-info">
               <h3>Seminararbeit</h3>
@@ -520,7 +561,7 @@
 
           <a class="project-card fade-in-up" href="assets/Doku.pdf" target="_blank">
             <div class="media-wrapper">
-              <img src="assets/platz.png" alt="Automatische Platzübersicht Doku">
+              <img loading="lazy" src="assets/platz.png" alt="Automatische Platzübersicht Doku">
             </div>
             <div class="project-info">
               <h3>Automatische Platzübersicht</h3>
@@ -529,7 +570,7 @@
           </a>
           <a class="project-card fade-in-up" href="assets/Praxissemester.pdf" target="_blank">
             <div class="media-wrapper">
-              <img src="assets/Praxissemester.jpg" alt="">
+              <img loading="lazy" src="assets/Praxissemester.jpg" alt="Praxissemester Projekte Dokumentation">
             </div>
             <div class="project-info">
               <h3>Praxissemester Projekte</h3>
@@ -539,7 +580,7 @@
 
            <a class="project-card fade-in-up" href="https://www.sleemhome.de/" target="_blank">
             <div class="media-wrapper">
-              <img src="assets/sleem.png" alt="Kissen Webseite">
+              <img loading="lazy" src="assets/sleem.png" alt="Kissen Webseite">
             </div>
             <div class="project-info">
               <h3>Sleemhome</h3>
@@ -547,13 +588,13 @@
             </div>
           </a>
 
-          <a class="project-card fade-in-up" href="#" target="_blank">
+          <a class="project-card fade-in-up" href="assets/Bachelor_Arbeit.pdf" target="_blank">
             <div class="media-wrapper">
-              <img src="assets/bachelorarbeit.jpg" alt="Bachelorarbeit THU Cloud Manager">
+              <img loading="lazy" src="assets/bachelorarbeit.jpg" alt="Bachelorarbeit THU Cloud Manager">
             </div>
             <div class="project-info">
               <h3>Bachelorarbeit THU Cloud Manager</h3>
-              <p>C#, Blazor, ASP.NET Core, Fluent UI. Comming soon!</p>
+              <p>C#, Blazor, ASP.NET Core, Fluent UI. Entwicklung einer webbasierten Verwaltungsplattform für die THU.</p>
             </div>
           </a>
           
@@ -606,10 +647,10 @@
             <h3 class="slider-heading">Ergebnis</h3>
             <div class="slider-container">
               <div class="slider">
-                <img src="assets/muskel.png" alt="Muskel" class="slider-img active">
-                <img src="assets/sieg.jpeg" alt="Sieg" class="slider-img">
-                <img src="assets/kampf.jpeg" alt="Kampf" class="slider-img">
-                <img src="assets/adern.png" alt="Kampf" class="slider-img">
+                <img src="assets/muskel.png" alt="" role="presentation" class="slider-img active">
+                <img src="assets/sieg.jpeg" alt="" role="presentation" class="slider-img">
+                <img src="assets/kampf.jpeg" alt="" role="presentation" class="slider-img">
+                <img src="assets/adern.png" alt="" role="presentation" class="slider-img">
               </div>
               <button aria-label="Nächstes Bild" tabindex="0"  class="prev-btn">&#10094;</button>
               <button aria-label="Nächstes Bild" tabindex="0" class="next-btn">&#10095;</button>
@@ -620,13 +661,7 @@
           <div class="video-wrapper">
             <h3 class="video-heading">Mein Weg:</h3>
             <div class="video-box">
-              <video 
-              src="assets/training.mov" 
-              autoplay 
-              muted 
-              playsinline 
-              loop 
-              preload="auto"></video>
+              <video src="assets/training.mp4" muted playsinline autoplay loop preload="metadata"></video>
             </div>
           </div>
         </div>
@@ -639,47 +674,36 @@
       
           <div class="love-slider">
             <div class="love-slide active">
-              <img src="assets/love1.jpeg" alt="Bild 1">
-              <p class="love-caption single-line">
-                <p class="love-caption single-line">📍 Prizren, Kosovo</p>
-
-              </p>
+              <img src="assets/love1.jpeg" alt="" role="presentation">
+              <p class="love-caption single-line">Prizren, Kosovo</p>
             </div>
             <div class="love-slide">
-              <img src="assets/love2.jpeg" alt="Bild 2">
+              <img src="assets/love2.jpeg" alt="" role="presentation">
               <p class="love-caption single-line">
-                <p class="love-caption single-line">📍München, Deutschland</p>
-
-              </p>
+                München, Deutschland</p>
             </div>
             <div class="love-slide">
-              <img src="assets/love4.jpeg" alt="Bild 4">
-              <p class="love-caption single-line">
-                <p class="love-caption single-line">📍 Antrag, 16.02.2025</p>
-
-              </p>
+              <img src="assets/love4.jpeg" alt="" role="presentation">
+              <p class="love-caption single-line"> Antrag, 16.02.2025</p>
             </div>
             <div class="love-slide">
-              <img src="assets/love5.jpeg" alt="Bild 5">
+              <img src="assets/love5.jpeg" alt="" role="presentation">
               <p class="love-caption single-line">
-                <p class="love-caption single-line">📍 Fush Kosov, Kosovo</p>
-
+                Fush Kosov, Kosovo
               </p>
             </div>
 
             <div class="love-slide">
-              <img src="assets/verlobung.jpeg" alt="Bild 5">
+              <img src="assets/verlobung.jpeg" alt="" role="presentation">
               <p class="love-caption single-line">
-                <p class="love-caption single-line">📍 Verlobungsfeier, 03.05.2025</p>
-
+                  Verlobungsfeier, 03.05.2025
               </p>
             </div>
 
             <div class="love-slide">
-              <img src="assets/mykonos2.jpeg" alt="Bild 6">
+              <img src="assets/mykonos2.jpeg" alt="" role="presentation">
               <p class="love-caption single-line">
-                <p class="love-caption single-line">📍 Mykonos, Griechenland, 10/2025</p>
-                
+                  Mykonos, Griechenland, 10/2025                
               </p>
             </div>
           </div>
@@ -687,46 +711,13 @@
         </div>
       </section>
 
-<!-- 
-<section class="section fade-in-up" >
-  <h2>Familie, mein größter Halt!</h2>
-  <div class="family-grid">
-    <div class="family-photo fade-in-up">
-      <img src="assets/papa.jpeg" alt="Mama & Papa">
-      <p>Mein Papa ❤️, der sein gesamtes Leben riskierte, damit wir eine bessere Zukunft haben.</p>
-    </div>
-    <div class="family-photo fade-in-up">
-      <img src="assets/mama.jpeg" alt="Familientreffen">
-      <p>Meine Mama ❤️, der ich mein ganzes Leben verdanke.</p>
-    </div>
-    <div class="family-photo fade-in-up">
-      <img src="assets/daja.jpg" alt="Geschwister">
-      <p>Mein Onkel Sami, der mir die besten Tipps für leben gegeben hat!</p>
-    </div>
-    <div class="family-photo fade-in-up">
-      <img src="assets/albion.jpeg" alt="Geschwister">
-      <p>Albion, der mich überall unterstützt hat.Ein Bruder, den ich über alles liebe!</p>
-    </div>
-    <div class="family-photo fade-in-up">
-      <img src="assets/nita.jpeg" alt="Geschwister">
-      <p>Nita, die immer sehr lieb zu mir ist und mich bei allem unterstützt, egal bei welchem Thema.</p>
-    </div>
-    <div class="family-photo fade-in-up">
-      <img src="assets/altin.jpeg" alt="Geschwister">
-      <p>Altin, der immer ein offenes Ohr für mich hat. Er hat mir viel beigebracht und ich bin ihm sehr dankbar.</p>
-    </div>
-  </div>
-</section>
--->
-
-
       <!-- Kontakt -->
       <div class="contact-wrapper fade-in-up" id="contact">
         <form id="kontakt-formular" class="glass-box" name="kontakt" method="POST" data-netlify="true" netlify>
           <input type="hidden" name="form-name" value="kontakt"/>
           <h2>Kontaktformular</h2>
       
-          <label for="anrede">Anrede:</label>
+          <label for="anrede-auswahl">Anrede:</label>
           <select name="anrede" id="anrede-auswahl" required>
             <option value="Herr">Herr</option>
             <option value="Frau">Frau</option>
@@ -736,7 +727,7 @@
       
           <div id="name-container">
             <label for="name">Name (optional):</label>
-            <input type="text" name="name" placeholder="Max Mustermann">
+            <input type="text" name="name" id="name" placeholder="Max Mustermann">
           </div>
       
           <div id="email-container">
@@ -745,15 +736,15 @@
             <small id="email-hinweis">Du erhältst eine Antwort an diese Adresse.</small>
           </div>
       
-          <label for="betreff">Grund der Kontaktaufnahme:</label>
+          <label for="betreff-auswahl">Grund der Kontaktaufnahme:</label>
           <select name="betreff" id="betreff-auswahl" required>
             <option value="Feedback">Feedback</option>
             <option value="Zusammenarbeit">Zusammenarbeit</option>
           </select>
       
-          <div id="projekt-typ-container" style="display: none;">
+          <div id="projekt" style="display: none;">
             <label for="projektTyp">Projekt-Typ:</label>
-            <select name="projektTyp">
+            <select id="projektTyp" name="projektTyp">
               <option value="Webseite">Webseite</option>
               <option value="Portfolio">Portfolio</option>
               <option value="Andere">Andere Projekte</option>
@@ -761,7 +752,7 @@
           </div>
       
           <label for="nachricht">Nachricht:</label>
-          <textarea name="nachricht" required></textarea>
+          <textarea id="nachricht" name="nachricht" required></textarea>
       
           <button type="submit">Absenden</button>
         </form>
@@ -779,8 +770,8 @@
           <a href="https://github.com/Altonbekolli" target="_blank">GitHub</a>
           <a href="https://www.linkedin.com/in/alton-bekolli-3203b335a/" target="_blank">LinkedIn</a>
         </div>
-        <p>📞 <a href="tel:+4917645994247">+49 176 45994247</a><br />
-          ✉️ <a href="mailto:Altonbekolli_1@web.de">Altonbekolli_1@web.de</a></p>
+        <p> <a href="tel:+4917645994247">+49 176 45994247</a><br />
+           <a href="mailto:Altonbekolli_1@web.de">Altonbekolli_1@web.de</a></p>
        </footer>
     </main>
   </div>
