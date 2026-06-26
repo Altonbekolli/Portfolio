@@ -2,9 +2,9 @@ function initContactForm() {
   const anredeAuswahl = document.getElementById("anrede-auswahl");
   const betreffAuswahl = document.getElementById("betreff-auswahl");
   const emailFeld = document.getElementById("email");
-  const name = document.getElementById("name-container");
+  const name = document.getElementById("name");
   const emailContainer = document.getElementById("email-container");
-  const projektTypContainer = document.getElementById("projekt-typ-container");
+  const projektTypContainer = document.getElementById("projektTyp");
   const form = document.getElementById("kontakt-formular");
   const dankeMessage = document.getElementById("danke-message");
   let successMessageTimeout;
