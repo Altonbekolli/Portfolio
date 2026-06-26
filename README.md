@@ -1,5 +1,9 @@
 # Alton Bekolli Portfolio
 
+<p align="center">
+  <img src="assets/lighthouse.png" alt="Lighthouse Score" width="650">
+</p>
+
 Willkommen in meinem Portfolio Repository.
 
 Auf dieser Webseite stelle ich mich, meinen bisherigen Werdegang und eine Auswahl meiner Projekte vor. Das Portfolio dient als zentrale Übersicht über meine bisherigen Erfahrungen in der Webentwicklung, Softwareentwicklung und im Studium der Informatik an der Technischen Hochschule Ulm.
@@ -41,6 +45,14 @@ Das Portfolio wird regelmäßig erweitert und an neue Projekte sowie neue Erfahr
 ## Kontakt
 
 Bei Interesse an einer Zusammenarbeit oder bei Fragen zu meinen Projekten kann über das Kontaktformular auf der Webseite Kontakt mit mir aufgenommen werden.
+
+## Inhalte der Webseite
+
+Die Webseite enthält eine persönliche Vorstellung, Informationen über meinen bisherigen Werdegang, eine Übersicht über meine technischen Fähigkeiten sowie eine Sammlung ausgewählter Projekte.
+
+Zusätzlich gibt es ein Kontaktformular, über das eine direkte Kontaktaufnahme möglich ist.
+
+Darüber hinaus werden dynamische Informationen über die GitHub REST API abgerufen. So wird beispielsweise automatisch die letzte Änderung des Portfolios anhand des aktuellsten Commits im Repository angezeigt. Bei Nichterreichbarkeit der API wird ein lokaler Fallback verwendet, sodass die Funktion jederzeit zuverlässig verfügbar bleibt.
 
 ## Live Demo
 
