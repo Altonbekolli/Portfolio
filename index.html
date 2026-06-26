@@ -47,31 +47,32 @@
     <meta name="twitter:description" content="Portfolio mit Web, Backend und Softwareprojekten.">
     <meta name="twitter:image" content="https://altonbekolli-portfolio.netlify.app/assets/vorschau.png">
   
-    <!-- Fonts -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"></noscript>
-  
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  
-    <!-- Animation Libraries -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/variables.css">
 
+    <!-- extern -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  
+    <link rel="icon" type="image/x-icon" href="assets/fav.png">
+
+
     <!-- Custom Script -->
     <script defer src="js/navigation.js"></script>
     <script defer src="js/animation.js"></script>
     <script defer src="js/contact.js"></script>
     <script defer src="js/slider.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="js/last-update.js"></script>
   </head>  
 <body>
+    <div class="last-update-badge" id="lastUpdateBadge">
+    <span class="status-dot"></span>
+    <span id="lastUpdateText">Letzte Änderung wird geladen...</span>
+  </div>
   <a href="#main" class="visually-hidden focusable">Zum Hauptinhalt springen</a>
   <button id="scrollToTop" title="Nach oben">
     <i class="fas fa-arrow-up"></i>
@@ -86,7 +87,7 @@
         <span style="--i:20"></span>
         <span style="--i:11"></span>
       </div>
-      <img src="assets/profil.jpeg" alt="Alton Bekolli" class="profile-pic" />
+      <img src="assets/profil.webp" alt="Alton Bekolli" class="profile-pic" />
       <h1>Alton Bekolli</h1>
        <!-- Hinweis in der Sidebar -->
       <p class="accesskey-hint" aria-hidden="false">
@@ -142,11 +143,23 @@
     <main id="main" class="main-content">
       <!-- Hero -->
       <section id="hero" class="hero fade-in-up">
-        <div class="hero-inner">
-          <h1>Hi, mein Name ist Alton und <span id="typed"></span></h1>
-          <a href="#projects" class="btn-hero">Sieh dir meine Projekte an</a>
+      <div class="hero-inner">
+        <div class="text-changer">
+        <p class="intro-text">Hi, mein Name ist Alton und ich bin</p>
+
+          <div class="role-container">
+            <div class="role-list">
+              <span class="role">Full-Stack Entwickler.</span>
+              <span class="role">Softwareentwickler.</span>
+              <span class="role">Technologiebegeistert.</span>
+              <span class="role">Full-Stack Entwickler.</span>
+            </div>
+          </div>
         </div>
-      </section>
+
+        <a href="#projects" class="btn-hero">Sieh dir meine Projekte an</a>
+      </div>
+    </section>
 
       <!-- Über mich -->
       <section id="about" class="section about-section">
@@ -157,7 +170,6 @@
             Ich bin Alton Bekolli, Informatikstudent an der Technischen Hochschule Ulm mit den Schwerpunkten Mobile Development und Computer Engineering.
             Seit April 2024 arbeite ich als Werkstudent bei der Firma BITE GmbH und habe dort im Zeitraum vom 05.05.2025 bis 30.09.2025 mein Praxissemester erfolgreich absolviert.
             Voraussichtlich werde ich bis zum Abschluss meines Bachelors im Sommer 2026 weiterhin bei BITE tätig sein und dabei eigenständig weitere Projekte umsetzen.
-          <p>
             Schon in der Schulzeit habe ich mit C# programmiert und meine Leidenschaft fürs Coden entdeckt. Ich entwickle mobile Apps, Webseiten, kleine Systeme und liebe es, Neues zu lernen, egal ob alleine oder im Team.
           </p>
           
@@ -407,9 +419,9 @@
           <div class="cv-card hover-glow">
             <h3>Bildungsweg</h3>
             <ul>
-              <li><strong><span class="no-detect">10/2022–07/2026</span>:</strong> B.Sc Informatik – TH Ulm</li>
-              <li><strong><span class="no-detect">09/2020–06/2022</span>:</strong> Fachhochschulreife – RBS Ulm</li>
-              <li><strong><span class="no-detect">09/2014–06/2020</span>:</strong> Mittlere Reife – Realschule Ulm</li>
+              <li><strong><span class="no-detect">10/2022–07/2026</span>:</strong> B.Sc Informatik THU</li>
+              <li><strong><span class="no-detect">09/2020–06/2022</span>:</strong> Fachhochschulreife, RBS Ulm</li>
+              <li><strong><span class="no-detect">09/2014–06/2020</span>:</strong> Mittlere Reife, Albert Einstein Realschule Ulm</li>
             </ul>
           </div>
 
@@ -517,7 +529,7 @@
           <!-- STREET LEGEND ONLY -->
           <a class="project-card fade-in-up" href="https://github.com/Altonbekolli/StreetLegendsFX" target="_blank">
             <div class="media-wrapper">
-              <img src="assets/game.png" alt="Street Legend Game">
+              <img src="assets/game.webp" alt="Street Legend Game">
             </div>
             <div class="project-info">
               <h3>Street Legend</h3>
@@ -540,7 +552,7 @@
 
           <a class="project-card fade-in-up" href="https://github.com/Lyro7/Raytracer" target="_blank">
             <div class="media-wrapper">
-              <img loading="lazy" src="assets/ray.png" alt="Raytraycer">
+              <img loading="lazy" src="assets/ray.webp" alt="Raytraycer">
             </div>
             <div class="project-info">
               <h3>Raytracer</h3>
@@ -561,7 +573,7 @@
 
           <a class="project-card fade-in-up" href="assets/Doku.pdf" target="_blank">
             <div class="media-wrapper">
-              <img loading="lazy" src="assets/platz.png" alt="Automatische Platzübersicht Doku">
+              <img loading="lazy" src="assets/platz.webp" alt="Automatische Platzübersicht Doku">
             </div>
             <div class="project-info">
               <h3>Automatische Platzübersicht</h3>
@@ -570,7 +582,7 @@
           </a>
           <a class="project-card fade-in-up" href="assets/Praxissemester.pdf" target="_blank">
             <div class="media-wrapper">
-              <img loading="lazy" src="assets/Praxissemester.jpg" alt="Praxissemester Projekte Dokumentation">
+              <img loading="lazy" src="assets/praxis_neu.png" alt="Praxissemester Projekte Dokumentation">
             </div>
             <div class="project-info">
               <h3>Praxissemester Projekte</h3>
@@ -580,7 +592,7 @@
 
            <a class="project-card fade-in-up" href="https://www.sleemhome.de/" target="_blank">
             <div class="media-wrapper">
-              <img loading="lazy" src="assets/sleem.png" alt="Kissen Webseite">
+              <img loading="lazy" src="assets/sleem.webp" alt="Kissen Webseite">
             </div>
             <div class="project-info">
               <h3>Sleemhome</h3>
@@ -590,7 +602,7 @@
 
           <a class="project-card fade-in-up" href="assets/Bachelor_Arbeit.pdf" target="_blank">
             <div class="media-wrapper">
-              <img loading="lazy" src="assets/bachelorarbeit.jpg" alt="Bachelorarbeit THU Cloud Manager">
+              <img loading="lazy" src="assets/bachelor.webp" alt="Bachelorarbeit THU Cloud Manager">
             </div>
             <div class="project-info">
               <h3>Bachelorarbeit THU Cloud Manager</h3>
@@ -647,10 +659,9 @@
             <h3 class="slider-heading">Ergebnis</h3>
             <div class="slider-container">
               <div class="slider">
-                <img src="assets/muskel.png" alt="" role="presentation" class="slider-img active">
-                <img src="assets/sieg.jpeg" alt="" role="presentation" class="slider-img">
-                <img src="assets/kampf.jpeg" alt="" role="presentation" class="slider-img">
-                <img src="assets/adern.png" alt="" role="presentation" class="slider-img">
+                <img src="assets/sieg.webp" alt="" role="presentation" class="slider-img active">
+                <img src="assets/kampf.webp" alt="" role="presentation" class="slider-img">
+                <img src="assets/adern.webp" alt="" role="presentation" class="slider-img">
               </div>
               <button aria-label="Nächstes Bild" tabindex="0"  class="prev-btn">&#10094;</button>
               <button aria-label="Nächstes Bild" tabindex="0" class="next-btn">&#10095;</button>
@@ -661,8 +672,8 @@
           <div class="video-wrapper">
             <h3 class="video-heading">Mein Weg:</h3>
             <div class="video-box">
-              <video src="assets/training.mp4" muted playsinline autoplay loop preload="metadata"></video>
-            </div>
+                <video src="assets/training.mp4" muted playsinline autoplay loop preload="metadata" aria-hidden="true"></video>            
+              </div>
           </div>
         </div>
       </section>
@@ -674,34 +685,34 @@
       
           <div class="love-slider">
             <div class="love-slide active">
-              <img src="assets/love1.jpeg" alt="" role="presentation">
+              <img src="assets/love1.webp" alt="" role="presentation">
               <p class="love-caption single-line">Prizren, Kosovo</p>
             </div>
             <div class="love-slide">
-              <img src="assets/love2.jpeg" alt="" role="presentation">
+              <img src="assets/love2.webp" alt="" role="presentation">
               <p class="love-caption single-line">
                 München, Deutschland</p>
             </div>
             <div class="love-slide">
-              <img src="assets/love4.jpeg" alt="" role="presentation">
+              <img src="assets/love4.webp" alt="" role="presentation">
               <p class="love-caption single-line"> Antrag, 16.02.2025</p>
             </div>
             <div class="love-slide">
-              <img src="assets/love5.jpeg" alt="" role="presentation">
+              <img src="assets/love5.webp" alt="" role="presentation">
               <p class="love-caption single-line">
                 Fush Kosov, Kosovo
               </p>
             </div>
 
             <div class="love-slide">
-              <img src="assets/verlobung.jpeg" alt="" role="presentation">
+              <img src="assets/verlobung.webp" alt="" role="presentation">
               <p class="love-caption single-line">
                   Verlobungsfeier, 03.05.2025
               </p>
             </div>
 
             <div class="love-slide">
-              <img src="assets/mykonos2.jpeg" alt="" role="presentation">
+              <img src="assets/mykonos2.webp" alt="" role="presentation">
               <p class="love-caption single-line">
                   Mykonos, Griechenland, 10/2025                
               </p>
