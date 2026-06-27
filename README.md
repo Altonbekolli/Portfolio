@@ -52,7 +52,9 @@ Die Webseite enthält eine persönliche Vorstellung, Informationen über meinen 
 
 Zusätzlich gibt es ein Kontaktformular, über das eine direkte Kontaktaufnahme möglich ist.
 
-Darüber hinaus werden dynamische Informationen über die GitHub REST API abgerufen. So wird beispielsweise automatisch die letzte Änderung des Portfolios anhand des aktuellsten Commits im Repository angezeigt. Bei Nichterreichbarkeit der API wird ein lokaler Fallback verwendet, sodass die Funktion jederzeit zuverlässig verfügbar bleibt.
+Darüber hinaus nutzt das Portfolio moderne serverlose Webtechnologien. Die letzte Änderung wird automatisch über die GitHub REST API anhand des neuesten Commits im Repository ermittelt. Ist die API vorübergehend nicht erreichbar, wird automatisch ein lokaler Fallback verwendet.
+
+Zusätzlich verfügt das Portfolio über einen serverlosen Besucherzähler auf Basis von Netlify Functions und Netlify Blobs. Die Besucherzahl wird serverseitig verwaltet, während localStorage verhindert, dass Seitenaktualisierungen desselben Browsers mehrfach gezählt werden.
 
 ## Live Demo
 
