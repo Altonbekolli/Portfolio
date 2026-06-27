@@ -1,8 +1,7 @@
 async function loadLastUpdate() {
   const textEl = document.getElementById("lastUpdateText");
-  if (!textEl) return;
-
   const fallbackText = "Letzte Änderung: 22.06.2026"; 
+  if (!textEl) return;
 
   try {
     const response = await fetch(

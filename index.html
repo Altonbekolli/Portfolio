@@ -37,8 +37,9 @@
     <title>Alton Bekolli | Full Stack Entwickler aus Ulm. Portfolio</title>
   
     <!-- Social Media Preview (Open Graph) -->
-    <meta property="og:title" content="Alton Bekolli Portfolio Webentwickler & App Developer" />
-    <meta property="og:description"content="Portfolio von Alton Bekolli. Full Stack Entwickler aus Ulm mit Projekten in C#, Blazor, React, Go, TypeScript und ASP.NET Core.">    <meta property="og:url" content="https://altonbekolli-portfolio.netlify.app" />
+    <meta property="og:title" content="Alton Bekolli Portfolio Full Stack & Software Entwickler" />
+    <meta property="og:description"content="Portfolio von Alton Bekolli. Full Stack Entwickler aus Ulm mit Projekten in C#, Blazor, React, Go, TypeScript und ASP.NET Core.">    
+    <meta property="og:url" content="https://altonbekolli-portfolio.netlify.app" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://altonbekolli-portfolio.netlify.app/assets/vorschau.png" /> 
 
@@ -51,6 +52,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/menu.css">
 
     <!-- extern -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -67,12 +69,45 @@
     <script defer src="js/slider.js"></script>
     <script defer src="js/script.js"></script>
     <script defer src="js/last-update.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/visitors.js"></script>
   </head>  
 <body>
-    <div class="last-update-badge" id="lastUpdateBadge">
-    <span class="status-dot"></span>
-    <span id="lastUpdateText">Letzte Änderung wird geladen...</span>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-controls="rightMenu" aria-expanded="false">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<aside class="right-menu" id="rightMenu" aria-hidden="true">
+  <button class="menu-close" id="menuClose" aria-label="Menü schließen">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <div class="right-menu-header">
+    <span class="menu-kicker">Portfolio Info</span>
+    <h2>Status</h2>
+    <p>Aktuelle Informationen zu meinem Portfolio.</p>
   </div>
+
+  <div class="menu-info-list">
+    <div class="menu-update-card">
+      <span class="status-dot"></span>
+      <div>
+        <small>Letzte Änderung</small>
+        <strong id="lastUpdateText">wird geladen...</strong>
+      </div>
+    </div>
+
+    <div class="menu-update-card">
+      <i class="fa-solid fa-users menu-icon" aria-hidden="true"></i>
+      <div>
+        <small>Besucher</small>
+        <strong id="visitorCount">wird geladen...</strong>
+      </div>
+    </div>
+  </div>
+</aside>
   <a href="#main" class="visually-hidden focusable">Zum Hauptinhalt springen</a>
   <button id="scrollToTop" title="Nach oben">
     <i class="fas fa-arrow-up"></i>

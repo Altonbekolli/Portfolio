@@ -132,50 +132,10 @@ html, body {
   opacity: 1!important;
   visibility: visible!important;
 }
-.last-update-badge {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  z-index: 9999;
-
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  padding: 10px 14px;
-  border-radius: 999px;
-
-  background: rgba(13, 17, 23, 0.88);
-  color: #ffffff;
-
-  font-size: 0.85rem;
-  font-weight: 700;
-
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.22);
-  backdrop-filter: blur(10px);
-
-  animation: badgeFloat 3s ease-in-out infinite;
-}
-
-.status-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #6366F1;
-  box-shadow: 0 0 12px rgba(99, 102, 241, 0.9);
-}
-
-@keyframes badgeFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-@media (max-width: 768px) {
-
+body.menu-open #scrollToTop {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 /*Layout*/
@@ -1603,8 +1563,7 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   .bubbles span,
   .headline-effect,
   .slider-heading,
-  .video-heading,
-  .role-list {
+  .video-heading{
     animation: none !important;
   }
 
@@ -1614,13 +1573,6 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
     transform: none;
     margin-left: 0;
     transition: none;
-  }
-
-  .last-update-badge {
-    top: 10px;
-    right: 10px;
-    font-size: 0.75rem;
-    padding: 8px 10px;
   }
   
   /*Lebenslauf*/
