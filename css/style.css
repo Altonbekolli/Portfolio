@@ -755,7 +755,13 @@ main.main-content {
 .hover-flip:hover .cv-back {
   transform: rotateY(360deg);
 }
-
+.cv-back strong {
+  color: white;
+  margin-bottom: 1rem;
+}
+#cv .cv-back strong a {
+  color: var(--role);
+}
 
 .circle-skill-grid {
   display: grid;

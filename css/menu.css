@@ -139,3 +139,63 @@ body.menu-open #scrollToTop {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+.menu-update-card {
+    position: relative;
+}
+
+.menu-tooltip {
+    position: absolute;
+
+    left: 0;
+    top: calc(100% + 10px);
+
+    width: 280px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #161b22;
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.35);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(8px);
+
+    transition: .25s ease;
+
+    pointer-events: none;
+
+    z-index: 50;
+}
+
+.menu-update-card:hover .menu-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-tooltip strong {
+    display: block;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.menu-tooltip p {
+    margin: 0;
+    font-size: .85rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+}
+
+.tooltip-icon{
+    position:absolute;
+    top:14px;
+    right:14px;
+    font-size:.8rem;
+    color:#6b7280;
+}

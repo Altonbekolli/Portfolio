@@ -89,24 +89,43 @@
     <h2>Status</h2>
     <p>Aktuelle Informationen zu meinem Portfolio.</p>
   </div>
-
   <div class="menu-info-list">
     <div class="menu-update-card">
-      <span class="status-dot"></span>
+      <i class="fa-solid fa-code-commit menu-icon commit-icon" aria-hidden="true"></i>
+
       <div>
         <small>Letzte Änderung</small>
         <strong id="lastUpdateText">wird geladen...</strong>
       </div>
-    </div>
 
-    <div class="menu-update-card">
-      <i class="fa-solid fa-users menu-icon" aria-hidden="true"></i>
-      <div>
-        <small>Besucher</small>
-        <strong id="visitorCount">wird geladen...</strong>
+      <div class="menu-tooltip">
+        <strong>GitHub API</strong>
+        <p>
+          Das Datum wird automatisch über die GitHub REST API anhand
+          des neuesten Commits dieses Repositories ermittelt. Falls
+          keine Verbindung möglich ist, wird ein Fallback-Datum angezeigt.
+        </p>
       </div>
     </div>
+
+  <div class="menu-update-card">
+    <i class="fa-solid fa-users menu-icon"></i>
+
+    <div>
+      <small>Besucher</small>
+      <strong id="visitorCount">wird geladen...</strong>
+    </div>
+
+    <div class="menu-tooltip">
+      <strong>Besucherzähler</strong>
+      <p>
+        Der Zähler wird serverseitig mit Netlify Functions und
+        Netlify Blobs verwaltet. localStorage verhindert doppelte
+        Zählungen durch Seitenaktualisierungen desselben Browsers.
+      </p>
+    </div>
   </div>
+</div>
 </aside>
   <a href="#main" class="visually-hidden focusable">Zum Hauptinhalt springen</a>
   <button id="scrollToTop" title="Nach oben">
