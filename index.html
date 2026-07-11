@@ -21,8 +21,9 @@
     }
     </script>
 
-    <meta name="description" content="Portfolio von Alton Bekolli, Full Stack Entwickler aus Ulm. Projekte mit C#, Blazor, ASP.NET Core, React, TypeScript, Go und PostgreSQL.">
-    <meta name="keywords" content="Alton Bekolli, Full Stack Entwickler Ulm, Programmierer Ulm, Webentwickler, JavaScript, TypeScript, Java, C++, Go, C#, PHP, Informatikstudent Ulm, Webseiten erstellen Ulm, App Entwicklung">
+    <meta
+    name="description"
+    content="Portfolio von Alton Bekolli, Bachelor of Science Informatik. Full-Stack Entwickler aus Ulm. Bachelorarbeit mit Note 1,1. Projekte in C#, .NET, Blazor, React, Go, ASP.NET Core und PostgreSQL.">    <meta name="keywords" content="Alton Bekolli, Full Stack Entwickler Ulm, Programmierer Ulm, Webentwickler, JavaScript, TypeScript, Java, C++, Go, C#, PHP, Informatikstudent Ulm, Webseiten erstellen Ulm, App Entwicklung">
 
     <!-- Autor & Robots -->
     <meta name="author" content="Alton Bekolli">
@@ -81,7 +82,7 @@
 
 <aside class="right-menu" id="rightMenu" aria-hidden="true">
   <button class="menu-close" id="menuClose" aria-label="Menü schließen">
-    <i class="fa-solid fa-xmark"></i>
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
   </button>
 
   <div class="right-menu-header">
@@ -89,9 +90,11 @@
     <h2>Status</h2>
     <p>Aktuelle Informationen zu meinem Portfolio.</p>
   </div>
+
   <div class="menu-info-list">
+
     <div class="menu-update-card">
-      <i class="fa-solid fa-code-commit menu-icon commit-icon" aria-hidden="true"></i>
+      <i class="fa-solid fa-code-commit menu-icon" aria-hidden="true"></i>
 
       <div>
         <small>Letzte Änderung</small>
@@ -102,30 +105,69 @@
         <strong>GitHub API</strong>
         <p>
           Das Datum wird automatisch über die GitHub REST API anhand
-          des neuesten Commits dieses Repositories ermittelt. Falls
-          keine Verbindung möglich ist, wird ein Fallback-Datum angezeigt.
+          des neuesten Commits dieses Repositories ermittelt.
         </p>
       </div>
     </div>
 
-  <div class="menu-update-card">
-    <i class="fa-solid fa-users menu-icon"></i>
+    <div class="menu-update-card">
+      <i class="fa-solid fa-users menu-icon" aria-hidden="true"></i>
 
-    <div>
-      <small>Besucher</small>
-      <strong id="visitorCount">wird geladen...</strong>
+      <div>
+        <small>Besucher</small>
+        <strong id="visitorCount">wird geladen...</strong>
+      </div>
+
+      <div class="menu-tooltip">
+        <strong>Besucherzähler</strong>
+        <p>
+          Der Zähler wird serverseitig mit Netlify Functions und
+          Netlify Blobs verwaltet. localStorage verhindert doppelte
+          Zählungen durch Seitenaktualisierungen desselben Browsers.
+        </p>
+      </div>
     </div>
 
-    <div class="menu-tooltip">
-      <strong>Besucherzähler</strong>
-      <p>
-        Der Zähler wird serverseitig mit Netlify Functions und
-        Netlify Blobs verwaltet. localStorage verhindert doppelte
-        Zählungen durch Seitenaktualisierungen desselben Browsers.
-      </p>
+    <div class="menu-update-card">
+      <i class="fa-solid fa-graduation-cap menu-icon" aria-hidden="true"></i>
+
+      <div>
+        <small>Bachelorabschluss</small>
+        <strong>Bachelorarbeit: 1,1</strong>
+      </div>
+
+      <div class="menu-tooltip">
+        <strong>Bachelorarbeit</strong>
+        <p>
+          Entwicklung und Erweiterung einer Full-Stack-Anwendung mit
+          C#/.NET, Blazor und ASP.NET Core.
+        </p>
+      </div>
     </div>
+
+    <a
+      class="menu-update-card"
+      href="assets/notenuebersicht.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Notenübersicht als PDF öffnen"
+    >
+      <i class="fa-solid fa-file-pdf menu-icon" aria-hidden="true"></i>
+
+      <div>
+        <small>Studium</small>
+        <strong>Notenübersicht ansehen</strong>
+      </div>
+
+      <div class="menu-tooltip">
+        <strong>Notenübersicht</strong>
+        <p>
+          Enthält die Prüfungsleistungen meines Bachelorstudiums
+          einschließlich der Bachelorarbeit.
+        </p>
+      </div>
+    </a>
   </div>
-</div>
 </aside>
   <a href="#main" class="visually-hidden focusable">Zum Hauptinhalt springen</a>
   <button id="scrollToTop" title="Nach oben">
@@ -190,7 +232,6 @@
       <div class="contact-info">
         <p><strong>Ulm</strong></p>
         <p><a href="mailto:Altonbekolli_1@web.de">Altonbekolli_1@web.de</a></p>
-        <p><a href="tel:+4917645994247">+49 176 45994247</a></p>
       </div>
     </aside>
     <!-- Main Content -->
@@ -220,12 +261,17 @@
         <!-- Über mich Text -->
         <div class="about-text slide-in-left">
           <h2>Über mich</h2>
-          <p>
-            Ich bin Alton Bekolli, Informatikstudent an der Technischen Hochschule Ulm mit den Schwerpunkten Mobile Development und Computer Engineering.
-            Seit April 2024 arbeite ich als Werkstudent bei der Firma BITE GmbH und habe dort im Zeitraum vom 05.05.2025 bis 30.09.2025 mein Praxissemester erfolgreich absolviert.
-            Voraussichtlich werde ich bis zum Abschluss meines Bachelors im Sommer 2026 weiterhin bei BITE tätig sein und dabei eigenständig weitere Projekte umsetzen.
-            Schon in der Schulzeit habe ich mit C# programmiert und meine Leidenschaft fürs Coden entdeckt. Ich entwickle mobile Apps, Webseiten, kleine Systeme und liebe es, Neues zu lernen, egal ob alleine oder im Team.
-          </p>
+         <p>
+        Ich bin Alton Bekolli und habe meinen Bachelor of Science in Informatik an der Technischen Hochschule Ulm erfolgreich abgeschlossen. Meine Bachelorarbeit, die ich mit der Note <strong>1,1</strong> abgeschlossen habe, beschäftigte sich mit der Entwicklung und Erweiterung einer Full-Stack-Anwendung auf Basis von <strong>C#/.NET</strong> und <strong>Blazor</strong>. Durch den serverseitigen Ansatz von Blazor konnten sowohl Backend als auch Benutzeroberfläche vollständig in C# entwickelt werden.
+        </p>
+
+        <p>
+        Seit April 2024 war ich als Werkstudent bei der BITE GmbH tätig und absolvierte dort erfolgreich mein Praxissemester. Während dieser Zeit arbeitete ich an verschiedenen Full-Stack-Projekten mit Technologien wie React, Preact, Go, PostgreSQL und TypeScript und entwickelte eigenständig neue Funktionen und Anwendungen.
+        </p>
+
+        <p>
+        Meine Begeisterung für die Softwareentwicklung begann bereits während meiner Schulzeit mit C#. Heute entwickle ich mit großer Leidenschaft moderne Webanwendungen und individuelle Softwaresysteme. Besonders interessieren mich Full-Stack-Entwicklung mit .NET, Backend-Architekturen sowie performante und skalierbare Softwarelösungen.
+        </p>
           
         </div>
       
@@ -253,6 +299,15 @@
               </div>
             </div>
           </div>
+
+          <div class="skill" data-category="sonstiges">
+            <span>Agile Zusammenarbeit im Team</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="100%"></div>
+              </div>
+            </div>
+          </div>
       
           <div class="skill" data-category="sonstiges">
             <span>Microsoft Office</span>
@@ -274,6 +329,24 @@
       
           <div class="skill" data-category="programmieren">
             <span>JavaScript / TypeScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="sonstiges">
+            <span>Code Reviews im Team</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="sonstiges">
+            <span>REST APIs</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
                 <div class="skill-fill" data-width="95%"></div>
@@ -317,6 +390,24 @@
             </div>
           </div>
 
+          <div class="skill" data-category="framework">
+            <span>Blazor / Razor Components</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="sonstiges">
+            <span>Softwarearchitektur / Clean Architecture</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+
           <div class="skill" data-category="programmieren">
             <span>C#</span>
             <div class="skill-bar">
@@ -341,6 +432,15 @@
             <div class="skill-bar">
               <div class="skill-fill-container">
                 <div class="skill-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="datenbank">
+            <span>Microsoft SQL Server</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="80%"></div>
               </div>
             </div>
           </div>
@@ -379,6 +479,24 @@
               </div>
             </div>
           </div>
+
+          <div class="skill" data-category="sonstiges">
+            <span>Azure DevOps</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="sonstiges">
+            <span>Docker</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="70%"></div>
+              </div>
+            </div>
+          </div>
       
           <div class="skill" data-category="framework">
             <span>Elastic UI</span>
@@ -391,6 +509,15 @@
 
           <div class="skill" data-category="sonstiges">
             <span>Arbeiten mit der GPU</span>
+            <div class="skill-bar">
+              <div class="skill-fill-container">
+                <div class="skill-fill" data-width="65%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill" data-category="programmieren">
+            <span>Python</span>
             <div class="skill-bar">
               <div class="skill-fill-container">
                 <div class="skill-fill" data-width="65%"></div>
@@ -459,7 +586,6 @@
                 <li><strong>Geboren:</strong> 08.12.2003, Ulm</li>
                 <li><strong>Wohnort:</strong> Ulm, Wiblingen</li>
                 <li><strong>Email:</strong> Altonbekolli_1@web.de</li>
-                <li><strong>Telefon:</strong> +49 176 45994247</li>
               </ul>
             </div>
             <div class="cv-back">

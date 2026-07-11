@@ -179,6 +179,7 @@ body.menu-open #scrollToTop {
     transform: translateY(0);
 }
 
+
 .menu-tooltip strong {
     display: block;
     color: var(--primary);
