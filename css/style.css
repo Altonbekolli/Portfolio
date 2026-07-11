@@ -191,8 +191,9 @@ body.menu-open #scrollToTop {
   background: #0d1117;
   color: white;
   width: 280px;
-  min-height: 100vh;
+  height: 100vh;
   padding: 2rem 0.5rem;
+  overflow-y: auto;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -1320,7 +1321,7 @@ main.main-content {
 }
 
 /*Zusatz*/
-img, video, .love-slide, .love-slide img, .love-slider-container {
+video, .love-slide, .love-slide img, .love-slider-container {
   overflow-x: hidden;
   height: auto;
   display: block;
@@ -1366,9 +1367,8 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   body {
     font-size: 15px;
   }
-  .sidebar h1{
-    font-size:19px;
-  }
+
+
   .hero h1 {
     font-size: 1.7rem;
   }
@@ -1396,7 +1396,6 @@ img, video, .love-slide, .love-slide img, .love-slider-container {
   .text-changer,.intro-text{
     font-size:22px;
   }
- 
 }
 @media (max-width: 883px) {
  .role{
