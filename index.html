@@ -54,6 +54,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/sports.css">
 
     <!-- extern -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -72,6 +73,7 @@
     <script defer src="js/last-update.js"></script>
     <script defer src="js/menu.js"></script>
     <script defer src="js/visitors.js"></script>
+    <script defer src="js/sports.js"></script>
   </head>  
 <body>
     <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-controls="rightMenu" aria-expanded="false">
@@ -261,18 +263,17 @@
         <!-- Über mich Text -->
         <div class="about-text slide-in-left">
           <h2>Über mich</h2>
-         <p>
-        Ich bin Alton Bekolli und habe meinen Bachelor of Science in Informatik an der Technischen Hochschule Ulm erfolgreich abgeschlossen. Meine Bachelorarbeit, die ich mit der Note <strong>1,1</strong> abgeschlossen habe, beschäftigte sich mit der Entwicklung und Erweiterung einer Full-Stack-Anwendung auf Basis von <strong>C#/.NET</strong> und <strong>Blazor</strong>. Durch den serverseitigen Ansatz von Blazor konnten sowohl Backend als auch Benutzeroberfläche vollständig in C# entwickelt werden.
-        </p>
+          <p>
+            Ich bin Alton Bekolli und habe meinen Bachelor of Science in Informatik an der Technischen Hochschule Ulm erfolgreich abgeschlossen. Meine Bachelorarbeit, die ich mit der Note <strong>1,1</strong> abgeschlossen habe, beschäftigte sich mit der Entwicklung und Erweiterung einer Full-Stack-Anwendung auf Basis von <strong>C#/.NET</strong> und <strong>Blazor</strong>. Dabei konnte ich meine Kenntnisse in der Entwicklung moderner Webanwendungen sowie in Backend-Architekturen weiter vertiefen.
+          </p>
 
-        <p>
-        Seit April 2024 war ich als Werkstudent bei der BITE GmbH tätig und absolvierte dort erfolgreich mein Praxissemester. Während dieser Zeit arbeitete ich an verschiedenen Full-Stack-Projekten mit Technologien wie React, Preact, Go, PostgreSQL und TypeScript und entwickelte eigenständig neue Funktionen und Anwendungen.
-        </p>
+          <p>
+            Von April 2024 bis zum Ende meines Studiums im August 2026 war ich als Werkstudent bei der BITE GmbH tätig und absolvierte dort ebenfalls mein Praxissemester. Während dieser Zeit sammelte ich umfangreiche praktische Erfahrung in der <strong>Full-Stack-Entwicklung</strong> und arbeitete an verschiedenen Projekten mit Technologien wie <strong>React, Preact, Go, PostgreSQL und TypeScript</strong>. Durch meine Tätigkeit bei BITE, mein Studium und weitere Softwareprojekte konnte ich vielseitige Erfahrungen in unterschiedlichen Bereichen der Softwareentwicklung sammeln.
+          </p>
 
-        <p>
-        Meine Begeisterung für die Softwareentwicklung begann bereits während meiner Schulzeit mit C#. Heute entwickle ich mit großer Leidenschaft moderne Webanwendungen und individuelle Softwaresysteme. Besonders interessieren mich Full-Stack-Entwicklung mit .NET, Backend-Architekturen sowie performante und skalierbare Softwarelösungen.
-        </p>
-          
+          <p>
+            Seit September 2026 arbeite ich als <strong>DevOps Engineer an der Technischen Hochschule Ulm</strong>. Dieser Schritt ermöglicht es mir, meine bisherigen Erfahrungen aus der Softwareentwicklung mit den Bereichen <strong>DevOps, Automatisierung, Deployment und Softwareinfrastruktur</strong> zu verbinden. Dabei erweitere ich kontinuierlich mein technisches Wissen und entwickle mich über die klassische Full-Stack-Entwicklung hinaus weiter.
+          </p>
         </div>
       
         <!-- Skills + Filter -->
@@ -831,32 +832,183 @@
       </section>
       
       <!-- Hobbys -->
-      <section class="section fade-in-up" id="love">
-        <h2>Hobby: Boxen</h2>
-        <div class="hobby-content">
-          <!-- Linke Seite: Bildslider -->
-          <div class="slider-wrapper">
-            <h3 class="slider-heading">Ergebnis</h3>
-            <div class="slider-container">
-              <div class="slider">
-                <img src="assets/sieg.webp" alt="" role="presentation" class="slider-img active">
-                <img src="assets/kampf.webp" alt="" role="presentation" class="slider-img">
-                <img src="assets/adern.webp" alt="" role="presentation" class="slider-img">
-              </div>
-              <button aria-label="Nächstes Bild" tabindex="0"  class="prev-btn">&#10094;</button>
-              <button aria-label="Nächstes Bild" tabindex="0" class="next-btn">&#10095;</button>
-            </div>
+      <!-- Sport / Hobbys -->
+<section class="section fade-in-up" id="love">
+
+  <div class="sport-header">
+    <span class="sport-kicker">Mein sportlicher Weg</span>
+    <h2>Sport</h2>
+  </div>
+
+  <!-- Tabs -->
+  <div class="sport-tabs" role="tablist">
+
+    <button
+      class="sport-tab active"
+      data-sport="boxing"
+      role="tab"
+      aria-selected="true"
+    >
+      <i class="fa-solid fa-hand-fist"></i>
+
+      <span class="sport-tab-text">
+        <strong>Boxen</strong>
+        <small>2020 – 2025</small>
+      </span>
+    </button>
+
+    <button
+      class="sport-tab"
+      data-sport="football"
+      role="tab"
+      aria-selected="false"
+    >
+      <i class="fa-solid fa-futbol"></i>
+
+      <span class="sport-tab-text">
+        <strong>Fußball</strong>
+        <small>2026 – heute</small>
+      </span>
+    </button>
+
+  </div>
+
+
+  <!-- BOXEN -->
+  <div class="sport-panel active" id="boxing">
+
+    <div class="sport-panel-heading">
+      <div>
+        <span class="sport-year">2020 – 2025</span>
+        <h3>Meine Boxkarriere</h3>
+      </div>
+
+      <i class="fa-solid fa-hand-fist sport-background-icon"></i>
+    </div>
+
+    <div class="hobby-content">
+      <!-- Linke Seite: Bildslider -->
+      <div class="slider-wrapper">
+        <h3 class="slider-heading">Ergebnis</h3>
+
+        <div class="slider-container">
+          <div class="slider">
+            <img
+              src="assets/sieg.webp"
+              alt=""
+              role="presentation"
+              class="slider-img active"
+            >
+
+            <img
+              src="assets/kampf.webp"
+              alt=""
+              role="presentation"
+              class="slider-img"
+            >
+
+            <img
+              src="assets/adern.webp"
+              alt=""
+              role="presentation"
+              class="slider-img"
+            >
           </div>
-      
-          <!-- Rechte Seite: Video -->
-          <div class="video-wrapper">
-            <h3 class="video-heading">Mein Weg:</h3>
-            <div class="video-box">
-                <video src="assets/training.mp4" muted playsinline autoplay loop preload="metadata" aria-hidden="true"></video>            
-              </div>
-          </div>
+
+          <button
+            aria-label="Vorheriges Bild"
+            class="prev-btn">
+            &#10094;
+          </button>
+
+          <button
+            aria-label="Nächstes Bild"
+            class="next-btn">
+            &#10095;
+          </button>
+
         </div>
-      </section>
+      </div>
+
+
+      <!-- Rechte Seite: Video -->
+      <div class="video-wrapper">
+
+        <h3 class="video-heading">Mein Weg:</h3>
+
+        <div class="video-box">
+          <video
+            src="assets/training.mp4"
+            muted
+            playsinline
+            autoplay
+            loop
+            preload="metadata"
+            aria-hidden="true"
+          ></video>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- FUSSBALL -->
+  <div class="sport-panel" id="football">
+
+    <div class="sport-panel-heading">
+
+      <div>
+        <span class="sport-year">2026 – heute</span>
+        <h3>Fußball in Wiblingen</h3>
+
+        <p class="sport-description">
+          Nach meiner Zeit im Boxsport begann für mich 2026
+          ein neues sportliches Kapitel im Fußball.
+        </p>
+      </div>
+
+      <i class="fa-solid fa-futbol sport-background-icon"></i>
+
+    </div>
+
+
+    <a
+      href="https://www.fupa.net/player/alton-bekolli-2585696"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fupa-card"
+      aria-label="FuPa Profil von Alton Bekolli öffnen"
+    >
+
+      <div class="fupa-image-wrapper">
+
+        <img
+          src="assets/wbg.png"
+          alt="FuPa Fußballprofil von Alton Bekolli"
+          class="fupa-image"
+        >
+
+        <div class="fupa-overlay">
+
+          <div class="fupa-link-content">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            <span>
+              Profil auf FuPa ansehen
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
 
       <section class="section fade-in-up">
         <h2>Die Liebe meines Lebens</h2>
