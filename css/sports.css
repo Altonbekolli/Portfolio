@@ -1,0 +1,413 @@
+/* =========================================
+   SPORT TABS
+========================================= */
+
+.sport-header {
+  margin-bottom: 22px;
+}
+
+.sport-kicker {
+  display: inline-block;
+  margin-bottom: 4px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+
+  opacity: 0.55;
+}
+
+
+/* Tab Navigation */
+
+.sport-tabs {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+
+  max-width: 520px;
+
+  padding: 6px;
+  margin-bottom: 28px;
+
+  background: rgba(0, 0, 0, 0.035);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+}
+
+
+.sport-tab {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 18px;
+
+  border: 0;
+  border-radius: 13px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  color: inherit;
+
+  text-align: left;
+
+  transition:
+    transform 0.25s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.sport-tab i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 11px;
+
+  background: rgba(83, 92, 255, 0.08);
+
+  font-size: 1rem;
+
+  transition:
+    transform 0.35s ease,
+    background 0.3s ease;
+}
+
+
+.sport-tab-text {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.25;
+}
+
+
+.sport-tab-text strong {
+  font-size: 0.95rem;
+}
+
+
+.sport-tab-text small {
+  margin-top: 2px;
+
+  font-size: 0.72rem;
+
+  opacity: 0.55;
+}
+
+
+/* Active Tab */
+
+.sport-tab.active {
+  background: #fff;
+
+  box-shadow:
+    0 7px 25px rgba(0, 0, 0, 0.08);
+
+  transform: translateY(-1px);
+}
+
+
+.sport-tab.active i {
+  background: #535cff;
+
+  color: #fff;
+
+  transform: rotate(-5deg) scale(1.05);
+}
+
+
+.sport-tab:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.55);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SPORT CONTENT
+========================================= */
+
+.sport-panel {
+  display: none;
+}
+
+
+.sport-panel.active {
+  display: block;
+
+  animation: sportPanelIn 0.55s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+@keyframes sportPanelIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px)
+      scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* Überschrift innerhalb des Tabs */
+
+.sport-panel-heading {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  padding: 22px 25px;
+  margin-bottom: 22px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(83, 92, 255, 0.07),
+      rgba(83, 92, 255, 0.015)
+    );
+
+  border: 1px solid rgba(83, 92, 255, 0.09);
+}
+
+
+.sport-panel-heading h3 {
+  margin: 4px 0 0;
+
+  font-size: 1.45rem;
+}
+
+
+.sport-year {
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  color: #535cff;
+
+  text-transform: uppercase;
+}
+
+
+.sport-description {
+  max-width: 650px;
+
+  margin: 9px 0 0;
+
+  line-height: 1.55;
+
+  opacity: 0.7;
+}
+
+
+.sport-background-icon {
+  position: absolute;
+
+  right: 28px;
+
+  font-size: 5rem;
+
+  opacity: 0.045;
+
+  transform: rotate(-12deg);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   FUPA CARD
+========================================= */
+
+.fupa-card {
+  display: block;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  color: inherit;
+  text-decoration: none;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+
+.fupa-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.14);
+}
+
+
+.fupa-image-wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+}
+
+
+.fupa-image {
+  display: block;
+
+  width: 100%;
+  max-height: 600px;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
+}
+
+
+.fupa-card:hover .fupa-image {
+  transform: scale(1.035);
+
+  filter: brightness(0.74);
+}
+
+
+/* Overlay beim Hover */
+
+.fupa-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 30%,
+      rgba(0, 0, 0, 0.55)
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+
+.fupa-card:hover .fupa-overlay {
+  opacity: 1;
+}
+
+
+.fupa-link-content {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #171717;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  transform: translateY(14px);
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.fupa-card:hover .fupa-link-content {
+  transform: translateY(0);
+}
+
+
+.fupa-link-content i {
+  color: #535cff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .sport-tabs {
+    width: 100%;
+  }
+
+  .sport-tab {
+    padding: 10px 12px;
+
+    gap: 8px;
+  }
+
+  .sport-tab i {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sport-tab-text strong {
+    font-size: 0.85rem;
+  }
+
+  .sport-tab-text small {
+    font-size: 0.65rem;
+  }
+
+  .sport-panel-heading {
+    padding: 18px;
+  }
+
+  .sport-background-icon {
+    right: 15px;
+
+    font-size: 4rem;
+  }
+
+}
