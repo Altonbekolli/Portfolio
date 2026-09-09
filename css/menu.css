@@ -115,6 +115,7 @@
   color: #9ca3af;
   font-size: .78rem;
   margin-bottom: 3px;
+  text-decoration: none;
 }
 
 .menu-update-card strong {
@@ -142,6 +143,7 @@ body.menu-open #scrollToTop {
 
 .menu-update-card {
     position: relative;
+    text-decoration:none;   
 }
 
 .menu-tooltip {
